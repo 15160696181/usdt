@@ -1,0 +1,90 @@
+.deal_record{
+    height: 100vh;
+}
+.exchange-top{
+    background: transparent;
+}
+.deal_record_content{
+    padding: 0.1rem 0.15rem 0.1rem 0.15rem;
+}
+/* 切换 */
+.cut{
+    font-size: 0.16rem;
+    color: #FFFFFF;
+    line-height: 0.35rem;
+    text-align: center;
+}
+.cut p{
+    width: 1rem;
+    height: 0.35rem;
+    float: left;
+}
+.cut p:nth-of-type(2){
+    margin-left: 0.2rem;
+}
+.cut_change{
+    background: #FFFFFF;
+    color: #8923D9;
+    border-radius: 0.17rem;
+}
+/* 买入 */
+.deal_content1{
+    padding: 0;
+    margin-top: 0.15rem;
+}
+.deal_content1 li p:nth-of-type(4)>span:nth-of-type(2){
+    background:#FFFFFF;
+    border-radius:0.13rem;
+    color: #9333FF;
+    width: 0.75rem;
+    border:1px solid rgba(147,51,255,1);
+    height: 0.25rem;
+    line-height: 0.25rem;
+}
+/* 售出 */
+.sell{
+    margin-top: 0.15rem;
+    display: none;
+}
+.sell li{
+    padding: 0.14rem 0.15rem 0.11rem 0.16rem;
+    background: #FFFFFF;
+    border-radius: 0.1rem;
+    position: relative;
+    margin-top: 0.1rem;
+}
+.sell li:nth-of-type(1){
+    margin-top: 0;
+}
+.sell li span{
+    font-size: 0.14rem;
+}
+.sell li>span:nth-of-type(1){
+    font-size: 0.16rem;
+}
+.sell li p:nth-of-type(2){
+    margin: 0.05rem 0 0.01rem 0;
+}
+.sell li p:nth-of-type(4){
+    margin: 0.02rem 0 ;
+}
+.sell li img{
+    position: absolute;
+    top: -0.03rem;
+    right: -0.05rem;
+    width: 1.02rem;
+    height: 0.66rem;
+}
+.sell li p:nth-last-of-type(1) span{
+    border:1px solid rgba(147,51,255,1);
+    border-radius: 0.13rem;
+    width: 0.75rem;
+    height: 0.25rem;
+    line-height: 0.25rem;
+    color: #9333FF;
+    font-size: 0.15rem;
+    margin-top: 0.12rem;
+}
+.sell li p:nth-last-of-type(1) span:nth-of-type(2){
+    margin-left: 0.18rem;
+}

@@ -1,0 +1,75 @@
+.ct_record_top{
+    background:linear-gradient(0deg,rgba(59,0,135,1) 0%,rgba(137,35,217,1) 100%);
+}
+.ct_record_top>div:nth-of-type(1){
+    padding: 0.14rem 0 0.16rem 0.15rem;
+}
+.ct_record_top>div:nth-of-type(1) img{
+    width: 0.23rem;
+    height: 0.25rem;
+}
+.ct_record_top>div:nth-of-type(1) p{
+    width: 85%;
+    color: #FFFFFF;
+    font-size: 0.18rem;
+    margin-top: -0.02rem;
+}
+.data{
+    color: #FFFFFF;
+    padding: 0.13rem 0.47rem 0.22rem 0.47rem;
+}
+.data p:nth-of-type(2){
+    font-size: 0.15rem;
+}
+.data p:nth-of-type(2){
+    margin-top: 0.02rem;
+    font-size: 0.24rem;
+}
+.time{
+    width: 77%;
+    margin-left: 4%;
+    padding: 0.16rem 0.28rem;
+    background: #FFFFFF;
+    border-radius: 0.1rem 0.1rem 0 0;
+}
+.time>p{
+    font-size: 0.15rem;
+}
+.time>div{
+    margin-top: 0.11rem;
+}
+.time>div span{
+    margin: 0 0.11rem;
+    font-size: 0.15rem;
+}
+.form-control{
+    width: 1.25rem;
+    height: 0.3rem;
+    line-height: 0.3rem;
+    text-align: center;
+    border-radius: 0.15rem;
+    background: #E5E5E5;
+    border: 0;
+    font-size: 0.15rem;
+}
+/* 内容 */
+.ct_record-content{
+    padding: 0 0.3rem 0.15rem 0.29rem;
+}
+.ct_record-content li{
+    padding: 0.2rem 0 0.11rem 0;
+    border-bottom: 0.01rem solid #CCCCCC;
+}
+.ct_record-content li div{
+    font-size: 0.13rem;
+    color: #666666;
+}
+.ct_record-content li div:nth-of-type(1) p:nth-of-type(1){
+    font-size: 0.15rem;
+}
+.ct_record-content li div:nth-of-type(1) p:nth-of-type(2){
+    margin-left: -0.15rem;
+}
+.ct_record-content li div p:nth-of-type(2){
+    margin-top: 0.1rem;
+}

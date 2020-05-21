@@ -1,0 +1,102 @@
+.deal_lobby{
+    width: 100%;
+    height: 100vh;
+}
+/* 已买入 */
+.deal_content{
+    /* display: none; */
+    width: 92%;
+    margin: 0.1rem 4% 0.1rem 4%;
+}
+.deal_content>div{
+    background: url(../images/deal_back.png) no-repeat;
+    background-size: 100% 100%;
+}  
+.deal_content>div{
+    margin-top: 0.1rem;
+}
+.deal_content>div:nth-of-type(1){
+    margin-top: 0;
+}
+.deal_content>div>div:nth-of-type(1){
+    font-size: 0.15rem;
+    color: #FFFFFF;
+    width: 60%;
+} 
+.deal_content>div>div:nth-of-type(1) p{
+    margin: 0.09rem 0 0 15%;
+}
+.deal_content>div>div:nth-of-type(1) p:nth-of-type(1){
+    margin-top: 0.13rem;
+}
+.deal_content>div button{
+    width: 0.75rem;
+    height: 0.3rem;
+    line-height: 0.3rem;
+    color: #FFFFFF;
+    font-size: 0.15rem;
+    margin: 0.2rem 0 ;
+    border: 0;
+    border-radius: 0.15rem;
+    text-align: center;
+}
+.deal_content>div button:nth-of-type(1){
+    background:linear-gradient(90deg,rgba(255,39,127,1) 0%,rgba(255,83,153,1) 100%);
+}
+.deal_content>div button:nth-of-type(2){
+    background:linear-gradient(90deg,rgba(255,181,40,1) 0%,rgba(255,198,88,1) 100%);
+    margin-left: 0.3rem;
+}
+/* 买入弹框 */
+.mask{
+    /* display: block; */
+}
+.buy_popout{
+    display: none;
+    background: #FFFFFF;
+    position: absolute;
+    top: 1.5rem;
+    left: 10%;
+    border-radius: 0.1rem;
+    width: 80%;
+    z-index: 16;
+    padding: 0.1rem 0 0.2rem 0;
+}
+.buy_popout img{
+    width: 0.15rem;
+    height: 0.15rem;
+    margin-right: 0.1rem;
+}
+.buy_popout p{
+    margin-left: 0.2rem;
+    font-size: 0.15rem;
+    margin-top: 0.08rem;
+}
+.buy_popout p:nth-of-type(1){
+    margin: 0 0 0.2rem 0.3rem;
+    font-size: 0.18rem;
+    color: #9333FF;
+}
+.buy_popout input{
+    width: 86%;
+    margin-left: 7%;
+    border: 0;
+    padding: 0.1rem 0;
+    font-size: 0.12rem;
+    color: #999999;
+    border-bottom: 0.01rem solid #CCCCCC;
+    margin-top: 0.05rem;
+}
+.buy_popout button{
+    margin-top: 0.25rem;
+    width: 1.5rem;
+    height: 0.44rem;
+    line-height: 0.44rem;
+    margin-left: 0.74rem;
+    border: 0;
+    background:linear-gradient(90deg,rgba(129,18,214,1) 0%,rgba(162,81,225,1) 100%);
+    box-shadow:0px 4px 10px 0px rgba(147,51,255,0.4);
+    border-radius: 0.22rem;
+    color: #FFFFFF;
+    font-size: 0.15rem;
+}

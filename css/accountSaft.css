@@ -1,0 +1,30 @@
+.accountSaft{
+    height: 100vh;
+}
+.exchange-top{
+    background: transparent;
+}
+.accountSaft-content{
+    padding: 0 0.32rem;
+}
+.accountSaft-content>p{
+    font-size: 0.15rem;
+    color: #FFFFFF;
+    margin-top: 0.31rem;
+}
+.accountSaft-content>p:nth-of-type(1){
+    margin-top: 0.18rem;
+}
+.revamp{
+    color: #D2D2D2;
+    font-size: 0.12rem;
+}
+.right{
+    width: 0.15rem;
+    height: 0.18rem;
+    transform:rotate(180deg);
+    -ms-transform:rotate(180deg); 	/* IE 9 */
+    -moz-transform:rotate(180deg); 	/* Firefox */
+    -webkit-transform:rotate(180deg); /* Safari 和 Chrome */
+    -o-transform:rotate(180deg); 	/* Opera */
+}

@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../css/common.css">
+    <link rel="stylesheet" href="../../css/reset.css">
+    <link rel="stylesheet" href="../../css/deal_lobby.css">
+    <script src="../../js/resize.js"></script>
+    <script src="../../js/jquery-3.4.1.min.js"></script>
+    <title>交易大廳</title>
+</head>
+<body>
+    <div class="deal_lobby back-blue">
+        <!-- 头部 -->
+        <div class="cz-top ov">
+            <div class="fl">
+                <a onclick="goBack()"><img src="../../images/left.png" alt=""></a>
+            </div>
+            <div class="fl ta-c">
+                <p>交易大廳</p>
+            </div>
+            <div class="fl ta-r" onclick="goDealRecord(1)">
+                <p>交易記錄</p>
+            </div>
+        </div>
+        <!-- 内容 -->
+        <div class="deal_content1">
+            <ul>
+                <li class="ov">
+                    <p class="ov">
+                        <span class="fl">123***1234</span>
+                        <span class="fr font-gray2">2020-05-11 12:12:11</span>
+                    </p>
+                    <p>
+                        <span class="font-gray1">
+                            出售數量：
+                        </span>
+                        <span>
+                            2200.00USDT
+                        </span>
+                    </p>
+                    <p class="font-gray1"><span>產品單價：</span><span>￥1.00</span></p>
+                    <p class="font-gray1 ov">
+                        <span class="fl">
+                            <span>購買金額：</span>
+                            <span>￥2200.00</span>
+                        </span>
+                        <span class="fr ta-c" onclick="buy()">買入</span>
+                    </p>
+
+                </li>
+            </ul>
+        </div>
+        <!-- 买入弹框 -->
+        <div class="mask"></div>
+        <div class="buy_popout">   
+            <p class="ta-c">
+                <span>買入</span>
+                <img class="fr cancel" src="../../images/dele.png" alt="">
+            </p>
+            <p>
+                <span>購買數量：</span>
+                <span>2200</span>
+            </p>
+            <p>
+                <span>產品單價：</span>
+                <span>￥1.00</span>
+            </p>
+            <p>
+                <span>合計金額：</span>
+                <span>￥2200.00</span>
+            </p>
+            <p>支付密碼</p>
+            <input type="password" placeholder="請輸入支付密碼">
+            <br>
+            <button>確定購買</button>
+        </div> 
+    </div>
+</body>
+<script>
+    function goBack() {
+        window.location.href='deal_lobby.html'
+    }
+    function goDealRecord(x){
+        window.location.href="deal_record.html"
+    }
+    function buy(){
+        window.location.href='buy.html'
+    }
+    function buy(){
+        $('.mask').show()
+        $('.buy_popout').show()
+    }
+    $('.cancel').click(function(){
+        $('.mask').hide()
+        $('.buy_popout').hide()
+    })
+    $('.buy_popout button').click(function(){
+        if($('.buy_popout input').val()==''){
+            alert("請輸入支付密碼")
+        }else{
+            alert('購買成功')
+            $('.mask').hide()
+            $('.buy_popout').hide()
+        }
+    })
+    $('.mask').click(function(){
+        $('.mask').hide()
+        $('.buy_popout').hide()
+    })
+</script>
+
+</html>

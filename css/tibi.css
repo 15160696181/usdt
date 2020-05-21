@@ -1,0 +1,46 @@
+
+/* 内容部分 */
+.tb-contont-layout1>img{
+    width: 0.1rem;
+    height: 0.1rem;
+    position: absolute;
+    right: 0.17rem;
+    bottom: 0.1rem;
+}
+.tb-contont-layout1>p,.tb-contont-layout2>p:nth-of-type(1),.tb-contont-layout4>p{
+    padding: 0.25rem 0 0.05rem 0;
+}
+.tb-contont-layout2>span{
+    position: absolute;
+    right: 0.17rem;
+    bottom: 0.45rem;
+    font-size: 0.14rem;
+}
+.tb-contont-layout2>p:nth-of-type(2){
+    margin: 0.2rem 0 0.31rem 0;
+    font-size: 0.14rem;
+}
+.tb-contont-layout2>p:nth-of-type(2)>span:nth-of-type(2){
+    margin-left: 0.5rem;
+}
+.tb-contont-layout3>p{
+    margin-bottom: 0.05rem;
+}
+.tb-contont-layout4{
+    position: relative;
+}
+.tb-contont-layout4>span{
+    position: absolute;
+    right: 0.17rem;
+    bottom: 0.05rem;
+    font-size: 0.14rem;
+}
+.tb-contont-layout5{
+    margin: 0.25rem 0 0.35rem;
+}
+.tb-contont-layout5>p{
+    font-size: 0.13rem;
+}
+.tb-contont-layout5>p:nth-of-type(2){
+    margin: 0.15rem 0 0.1rem 0;
+}

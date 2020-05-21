@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/common.css">
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/invite.css">
+    <script src="./js/resize.js"></script>
+    <script src="./js/jquery-3.4.1.min.js"></script>
+    <script src="./js/jquery.qrcode.min.js"></script>
+    <script src="./js/html2canvas.js"></script>
+    <script src="./js/html2canvas.min.js"></script>
+    <title>邀請好友</title>
+</head>
+<style type="text/css">
+    .home-footer {
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+        background: rgba(255, 255, 255, 1);
+        z-index: 1000;
+    }
+
+    .home-footer a {
+        width: 33.33%;
+        text-align: center;
+    }
+
+    .home-footer a p {
+        font-size: 0.11rem;
+        margin-bottom: 0.02rem;
+    }
+
+    .footer-img1 {
+        width: 0.38rem;
+        height: 0.38rem;
+        margin: 0.01rem 0 -0.05rem;
+    }
+
+    .footer-img2 {
+        width: 0.26rem;
+        height: 0.28rem;
+        margin: 0.03rem 0 0.04rem;
+    }
+
+    .footer-img3 {
+        width: 0.28rem;
+        height: 0.28rem;
+        margin: 0.03rem 0 0.04rem;
+    }
+</style>
+
+<div class="home-footer ov">
+    <a class="fl ov">
+        <img src="./images/zichang.png" alt="" class="footer-img1">
+        <p class="font-blue">資產</p>
+    </a>
+    <a class="fl ov">
+        <img src="./images/jiedan1.png" alt="" class="footer-img2">
+        <p class="font-gray">接單</p>
+    </a>
+    <a class="fl ov">
+        <img src="./images/mine1.png" alt="" class="footer-img3">
+        <p class="font-gray">我的</p>
+    </a>
+</div>
+</body>
+<script src="./js/jquery-3.4.1.min.js"></script>
+<script>
+    console.log($('.home-footer a:eq(0) img')[0].src)
+    $(".home-footer a").click(function () {
+        if ($(this)[0].children[1].innerHTML == '資產') {
+            $(this)[0].children[0].src = '/Public/jt/images/zichang.png'
+            $(this)[0].children[1].className='font-blue'
+        $(this).siblings().className='font-gray'
+        } else if ($(this)[0].children[1].innerHTML == '接單') {
+            $(this)[0].children[0].src = '/Public/jt/images/jiedan.png'
+            $(this)[0].children[1].className='font-blue'
+        $(this).siblings().className='font-gray'
+        } else if ($(this)[0].children[1].innerHTML == '我的') {
+            $(this)[0].children[0].src = '/Public/jt/images/mine.png'
+            $(this)[0].children[1].className='font-blue'
+            console.log($(this).siblings().children[1])
+        $(this).siblings().className='font-gray'
+        }
+        console.log($(this)[0].children[0].src)
+        console.log($(this)[0].children)
+        
+        
+    })
+</script>
+
+</html>

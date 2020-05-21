@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/common.css">
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../css/home.css">
+    <link rel="stylesheet" href="../css/swiper.min.css">
+    <script src="../js/resize.js"></script>
+    <script src="../js/jquery-3.4.1.min.js"></script>
+    <script src="../js/swiper.min.js"></script>
+    <title>首页</title>
+</head>
+<body>
+    <div class="home">
+        <!-- 头部 -->
+        <div class="home-top">
+            <p>資產折合</p>
+            <p>0 USDT</p>
+            <P>≈0 CNY</P>
+            <p><span class="ellipsis">AGJ485UU98fjkdf</span><img src="../images/code.jpg" alt=""><span>></span></p>
+        </div>
+        <!-- 中间部分 -->
+        <div class="home-center">
+            <div class="home-center1 ov">
+                <a class="center-layout1 fl">
+                    <p>可用額度</p>
+                    <p>0.00</p>
+                </a>
+                <a class="center-layout1 fl">
+                    <p>接單額度</p>
+                    <p>0.00</p>
+                </a>
+                <a class="center-layout1 fl">
+                    <p>今日收益</p>
+                    <p>0.00</p>
+                </a>
+            </div>
+            <div class="home-center2 ov">
+                <a href="./chongzhi.html" class="center-layout2 fl">
+                    <img src="../images/chong.png" alt="">
+                    <span>充幣</span>
+                </a>
+                <a href="./tibi.html" class="center-layout2 fl">
+                    <img src="../images/ti.png" alt="">
+                    <span>提幣</span>
+                </a>
+                <a href="./zhuanzhang.html" class="center-layout2 fl">
+                    <img src="../images/zhuang.png" alt="">
+                    <span>轉賬</span>
+                </a>
+            </div>
+            <div class="home-center3 ov">
+                <a href="./chongzhi_record.html" class="center-layout3 fl">
+                    <img src="../images/code1.png" alt="">
+                    <p>充值記錄</p>
+                </a>
+                <a href="./tibi_record.html" class="center-layout3 fl">
+                    <img src="../images/code2.png" alt="">
+                    <p>提币記錄</p>
+                </a>
+                <a href="./zz_record.html" class="center-layout3 fl">
+                    <img src="../images/code3.png" alt="">
+                    <p>转账記錄</p>
+                </a>
+                <a class="center-layout3 fl">
+                    <img src="../images/code4.png" alt="">
+                    <p>接单記錄</p>
+                </a>
+                <a class="center-layout3 fl layout-bot">
+                    <img src="../images/code5.png" alt="">
+                    <p>交易記錄</p>
+                </a>
+                <a href="./shouyi_mx.html" class="center-layout3 fl layout-bot">
+                    <img src="../images/code6.png" alt="">
+                    <p>收益記錄</p>
+                </a>
+                <a href="./deal_lobby/deal_lobby.html" class="center-layout3 fl layout-bot" onclick="goDealLobby()">
+                    <img src="../images/code7.png" alt="">
+                    <p>交易大厅</p>
+                </a>
+                <a href="./shouzhi_mx.html" class="center-layout3 fl layout-bot">
+                    <img src="../images/code8.png" alt="">
+                    <p>流水明細</p>
+                </a>
+            </div>
+        </div>
+        <!-- 轮播图 -->
+    <div class="swiper-container">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide"><img class="banner1_.jpg" src="../images/swiper.png" alt=""></div>
+            <div class="swiper-slide"><img class="banner2_.jpg" src="../images/swiper.png" alt=""></div>
+            <div class="swiper-slide"><img class="banner3_.jpg" src="../images/swiper.png" alt=""></div>
+        </div>
+        <!-- 如果需要分页器 -->
+        <div class="swiper-pagination"></div>
+    </div>
+    </div>
+    <!-- 底部固定 -->
+    <div class="home-footer ov">
+        <a href="./home.html" class="fl ov">
+            <img src="../images/zichang.png" alt="" class="footer-img1">
+            <p class="font-blue">資產</p>
+        </a>
+        <a href="../takeOrders/takeOrders.html" class="fl ov">
+            <img src="../images/jiedan1.png" alt="" class="footer-img2">
+            <p class="font-gray">接單</p>
+        </a>
+        <a href="../mine/mine.html" class="fl ov">
+            <img src="../images/mine1.png" alt="" class="footer-img3">
+            <p class="font-gray">我的</p>
+        </a>
+    </div>
+</body>
+<script src="../js/watch_scroll.js"></script>
+<script>
+    function goDealLobby(){
+        localStorage.setItem("key", "0");
+    }
+     var mySwiper = new Swiper ('.swiper-container', {
+    direction: 'horizontal', // 垂直切换选项
+    loop: true, // 循环模式选项
+    
+    // 如果需要分页器
+    pagination: {
+        el:'.swiper-pagination'
+    },
+    autoplay: {
+    delay: 3000,
+    stopOnLastSlide: false,
+    disableOnInteraction: true,
+    },
+    // paginationType: 'custom',//这里分页器类型必须设置为custom,即采用用户自定义配置 
+  //下面方法可以生成我们自定义的分页器到页面上 
+//   paginationCustomRender: function(swiper, current, total) { 
+//   var customPaginationHtml = ""; 
+//   for(var i = 0; i < total; i++) { 
+   //判断哪个分页器此刻应该被激活 
+//    if(i == (current - 1)) { 
+//    customPaginationHtml += '<span class="swiper-pagination-customs swiper-pagination-customs-active"></span>'; 
+//    } else { 
+//    customPaginationHtml += '<span class="swiper-pagination-customs"></span>'; 
+//    } 
+//   } 
+//   return customPaginationHtml; 
+//   } 
+  })      
+  var phoneHeight=document.body.clientHeight;
+    if(phoneHeight<=480){
+        $('.home-top p:eq(1)').css({
+            margin:'0'
+        })
+        $('.home-center1').css({
+            marginTop:'0.22rem'
+        })
+        // $(".home").height('100%')
+    }
+    // if(phoneHeight>=1024){
+    //     $(".home").height('100%')
+    // }
+    if(phoneHeight>=812&&phoneHeight<=1024){
+        $('.home-center1').css({
+            marginTop:'0.8rem'
+        })
+    }
+</script>
+</html>

@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/common.css">
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../css/zz_record.css">
+    <script src="../js/resize.js"></script>
+    <script src="../js/jquery-3.4.1.min.js"></script>
+    <title></title>
+</head>
+
+<body>
+    <div class="zz_record back-blue">
+        <!-- 头部 -->
+        <div class="cz-top ov">
+            <div class="fl">
+                <a href="./home.html"><img src="../images/left.png" alt=""></a>
+            </div>
+            <div class="fl ta-c">
+                <p>轉賬記錄</p>
+            </div>
+            <div class="fl ta-r">
+                <p onclick="screen()">筛选</p>
+            </div>
+        </div>
+        <!-- 内容 -->
+        <div class="zz_record-content">
+            <div class="content_data">
+                <p>本月</p>
+                <ul>
+                    <li>
+                        <p class="ov">
+                            <span class="fl">轉出</span>
+                            <span class="fr font-red6">-1.600.00元</span>
+                        </p>
+                        <p>
+                            <span>賬戶：</span>
+                            <span>154****1987</span>
+                            <span>（用戶名）</span>
+                        </p>
+                        <p>
+                            <span>發起時間：</span>
+                            <span>2020-05-03  19:00:00</span>
+                        </p>
+                    </li>
+                </ul>
+            </div>
+            <div class="content_data">
+                <p>4月</p>
+                <ul>
+                    <li>
+                        <p class="ov">
+                            <span class="fl">轉入</span>
+                            <span class="fr font-yellow3">+1.600.00元</span>
+                        </p>
+                        <p>
+                            <span>賬戶：</span>
+                            <span>154****1987</span>
+                            <span>（用戶名）</span>
+                        </p>
+                        <p>
+                            <span>發起時間：</span>
+                            <span>2020-05-03  19:00:00</span>
+                        </p>
+                    </li>
+                    <li>
+                        <p class="ov">
+                            <span class="fl">轉入</span>
+                            <span class="fr font-red6">-1.600.00元</span>
+                        </p>
+                        <p>
+                            <span>賬戶：</span>
+                            <span>154****1987</span>
+                            <span>（用戶名）</span>
+                        </p>
+                        <p>
+                            <span>發起時間：</span>
+                            <span>2020-05-03  19:00:00</span>
+                        </p>
+                    </li>
+                    <li>
+                        <p class="ov">
+                            <span class="fl">轉入</span>
+                            <span class="fr font-red6">-1.600.00元</span>
+                        </p>
+                        <p>
+                            <span>賬戶：</span>
+                            <span>154****1987</span>
+                            <span>（用戶名）</span>
+                        </p>
+                        <p>
+                            <span>發起時間：</span>
+                            <span>2020-05-03  19:00:00</span>
+                        </p>
+                    </li>
+                    <li>
+                        <p class="ov">
+                            <span class="fl">轉入</span>
+                            <span class="fr font-red6">-1.600.00元</span>
+                        </p>
+                        <p>
+                            <span>賬戶：</span>
+                            <span>154****1987</span>
+                            <span>（用戶名）</span>
+                        </p>
+                        <p>
+                            <span>發起時間：</span>
+                            <span>2020-05-03  19:00:00</span>
+                        </p>
+                    </li>
+                    <li>
+                        <p class="ov">
+                            <span class="fl">轉入</span>
+                            <span class="fr font-red6">-1.600.00元</span>
+                        </p>
+                        <p>
+                            <span>賬戶：</span>
+                            <span>154****1987</span>
+                            <span>（用戶名）</span>
+                        </p>
+                        <p>
+                            <span>發起時間：</span>
+                            <span>2020-05-03  19:00:00</span>
+                        </p>
+                    </li>
+                    <li>
+                        <p class="ov">
+                            <span class="fl">轉入</span>
+                            <span class="fr font-red6">-1.600.00元</span>
+                        </p>
+                        <p>
+                            <span>賬戶：</span>
+                            <span>154****1987</span>
+                            <span>（用戶名）</span>
+                        </p>
+                        <p>
+                            <span>發起時間：</span>
+                            <span>2020-05-03  19:00:00</span>
+                        </p>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <!-- 遮罩 -->
+        <div class="mask"></div>
+        <div class="choose">
+            <div>
+                <p>篩選</p>
+            <div class="choose-time">
+                <p>開始時間：</p>
+                <!-- <input type="text" placeholder="選擇開始時間"> -->
+                <div class="col-xs-6">
+                    <input readonly class="form-control" type="text" id="date-group1-2" placeholder="選擇開始時間">
+                </div>
+                <img src="../images/trun-bot.png" alt="">
+            </div>
+            <div class="choose-time">
+                <p>結束時間：</p>
+                <!-- <input type="text" placeholder="選擇結束時間"> -->
+                <div class="col-xs-6">
+                    <input readonly class="form-control" type="text" id="date-group1-3" placeholder="選擇結束時間">
+                </div>
+                <img src="../images/trun-bot.png" alt="">
+            </div>
+		    <div class="label-inp">
+                <label><input type="radio" class="tui-checkbox" name="sex" value="轉入">轉入</label>
+		        <label><input class="tui-checkbox" type="radio" name="sex" value="轉出">轉出</label>
+            </div>
+            <div class="choose-btn">
+                <button class="back-gray cancel">取消</button>
+                <button class="back-blue1 confirm">確定</button>
+            </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="../js/rolldate.min.js"></script>
+<script src="../js/choose_time.js"></script>
+<script src="../js/watch_scroll.js"></script>
+<script src="../js/scroll.js"></script>
+<script>
+    $('.cancel').click(function(){
+        $('.mask').hide();
+        $('.choose').hide();
+    })
+    $('.confirm').click(function(){
+        $('.mask').hide();
+        $('.choose').hide();
+    })
+    $('.mask').click(function(){
+        $('.mask').hide();
+        $('.choose').hide();
+    })
+    function screen(){
+        $('.mask').show();
+        $('.choose').show();
+    }
+</script>
+
+</html>

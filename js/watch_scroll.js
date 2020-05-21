@@ -1,0 +1,9 @@
+$(window).scroll(function(){
+    console.log(1)
+    $('.back-blue').css({
+        height:'100%'
+    })
+    $('.home').css({
+        height:'100%'
+    })
+})

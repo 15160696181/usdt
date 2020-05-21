@@ -1,0 +1,145 @@
+.zz_record{
+    height: 100vh;
+}
+.zz_record-content{
+    padding: 0 0.15rem 0.1rem 0.15rem ;
+}
+.content_data{
+    padding-top: 0.1rem;
+}
+.content_data li{
+    background: #FFFFFF;
+    border-radius: 0.1rem;
+    padding: 0.16rem 0.2rem;
+    margin-top: 0.1rem;
+    font-size: 0.15rem;
+}
+.content_data>p{
+    color: #FFFFFF;
+    font-size: 0.16rem;
+    margin-left: 0.12rem;
+}
+.content_data li p:nth-of-type(1) span:nth-of-type(2){
+    font-size: 0.18rem;
+}
+.content_data li p{
+    margin-top: 0.08rem;
+}
+.content_data li p:nth-of-type(1){
+    margin-top: 0;
+}
+/* 筛选日期 */
+.choose{
+    /* height: 2rem; */
+    width: 100%;
+    background: #FFFFFF;
+    position: fixed;
+    bottom: 0;
+    display: none;
+    z-index: 16;
+    transition: 1s;
+}
+.choose>div{
+    position: relative;
+}
+.choose>div>p{
+    margin: 0.14rem 0 0 45%;
+    color: #9333FF;
+    font-size: 0.16rem;
+}
+.choose-time{
+    margin:0.16rem 9.7%;
+    position: relative;
+}
+.choose-time input{
+    width: 100%;
+    padding: 0.1rem 0 0.1rem 0;
+    font-size: 0.15rem;
+    color: #999999;
+    text-align: center;
+    border: 0;
+    border-bottom: 0.01rem solid #CCCCCC;
+}
+.choose-time>p{
+    color: #666666;
+    font-size: 0.15rem;
+    position: absolute;
+    top: 0.1rem;
+    left: 0;
+}
+.choose-time>img{
+    width: 0.1rem;
+    height: 0.08rem;
+    position: absolute;
+    top: 0.16rem;
+    right: 0.1rem;
+}
+.label-inp{
+    margin: 0.1rem 0 0.2rem 9.7%;
+}
+.label-inp>label{
+    font-size: 0.15rem;
+    color: #666666;
+}
+.label-inp>label:nth-of-type(2){
+    margin-left: 0.5rem;
+}
+.choose-btn{
+    position: sticky;
+    bottom: 0;
+    width: 100%;
+}
+.choose-btn>button{
+    float: left;
+    width: 50%;
+    height: 0.44rem;
+    text-align: center;
+    border: 0;
+    color: #FFFFFF;
+    font-size: 0.15rem;
+    line-height: 0.44rem;
+}
+.tui-checkbox:checked {
+    background:#FFFFFF;
+}
+.tui-checkbox {
+width:0.12rem;
+height:0.12rem;
+background-color:#ffffff;
+border:solid 1px #dddddd;
+-webkit-border-radius:50%;
+border-radius:50%;
+font-size:0.8rem;
+margin:0.05rem 0.1rem 0 0;
+padding:0;
+position:relative;
+display:inline-block;
+vertical-align:top;
+cursor:default;
+-webkit-appearance:none;
+-webkit-user-select:none;
+user-select:none;
+-webkit-transition:background-color ease 0.1s;
+transition:background-color ease 0.1s;
+}
+.sixin-checkbox{
+margin: -3px 0 0 470px;
+}
+.tui-checkbox:checked::after {
+
+content:'';
+top:0.01rem;
+left:0.01rem;
+position:absolute;
+background:#9333FF;
+/* border:#fff solid 2px; */
+border-top:none;
+border-right:none;
+height:0.08rem;
+width:0.08rem;
+border-radius: 50%;
+/* -moz-transform:rotate(-45deg);
+-ms-transform:rotate(-45deg);
+-webkit-transform:rotate(-45deg);
+transform:rotate(-45deg); */
+}

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../css/common.css">
+    <link rel="stylesheet" href="../../css/reset.css">
+    <link rel="stylesheet" href="../../css/sell_set.css">
+    <script src="../../js/resize.js"></script>
+    <script src="../../js/jquery-3.4.1.min.js"></script>
+    <title>售出</title>
+</head>
+
+<body>
+    <div class="go-back back-blue sell_set">
+        <!-- 头部 -->
+        <div class="exchange-top ov">
+            <a onclick="goBack()">
+                <img class="fl" src="../../images/left.png" alt="">
+            </a>
+            <p class="fl ta-c">售出</p>
+        </div>
+        <!-- 中间内容 -->
+        <div class="sell_set_content">
+            <form name="formlogin" id="loginForm" class="formlogin" method="post" action="" onsubmit="return confirm()">
+                <!-- /Index/login_active.html -->
+                <div class="inp">
+                    <div class="inp1">
+                        <p>售出數量</p>
+                        <span class="input_bg_nick"></span>
+                        <span class="input_fg"></span>
+                        <input type="text" class="" name="" placeholder="請輸入產品數量">
+                    </div>
+                    <div class="inp2">
+                        <p>單價</p>
+                        <span class="input_bg_pass"></span>
+                        <span class="input_fg"></span>
+                        <input type="text" class="" name=""
+                            placeholder="請輸入產品單價">
+                        <p>
+                            <span>合計縂購買金額:</span>
+                            <span>0.0</span>
+                        </p>
+                    </div>
+                </div>
+                <div class="sell_set_bot" align="center">
+                    <div class="ta-c">
+                        <button class="btn" type="submit">確定</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+<script>
+    // 返回
+    function goBack() {
+        window.location.href='deal_lobby.html'
+    }
+    function confirm(){
+        if($('.inp1 input').val()==''){
+            alert('請輸入產品數量')
+            return false;
+        }else if($('.inp2 input').val()==''){
+            alert('請輸入產品單價')
+            return false;
+        }
+    }
+</script>
+
+</html>

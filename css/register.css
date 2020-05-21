@@ -1,0 +1,64 @@
+.register{
+    padding: 0.62rem 0 0 0;
+    color: #FD9821;
+    font-size: 0.24rem;
+}
+.register>img{
+    width: 1.13rem;
+    height: 1.17rem;
+    margin-bottom: 0.12rem;
+}
+.table_reg_form tr{
+    /* margin-top: 0.33rem; */
+}
+.inp2 span{
+    position: absolute;
+    right: 0;
+    bottom: 0.05rem;
+    font-size: 0.15rem;
+    color: #8213D6;
+}
+
+.register-text a{
+    color: #9333FF;
+    font-size: 0.12rem;
+}
+.register-text{
+    margin-bottom: 0.3rem;
+}
+.inp{
+    padding: 0 0.37rem;
+    margin: 0;
+}
+.inp input{
+    padding: 0 0 0.14rem 0.51rem !important;
+    width: 2.49rem !important;
+    font-size: 0.15rem;
+    color: #999999 !important;
+    margin-top: 0.33rem;
+}
+.inp table{
+    position: relative;
+}
+.inp img{
+    position: absolute;
+    left: 0.06rem;
+    width: 0.25rem;
+    height: 0.25rem;
+}
+.img1{
+    top: 0.34rem;
+}
+.img2{
+    top: 1.02rem;
+}
+.img3{
+    bottom: 0.13rem;
+}
+.tb-contont1{
+    padding: 0 !important;
+}
+.tb-contont1 button{
+    margin-top: 0.5rem;
+    width: 100%;
+}

@@ -1,0 +1,26 @@
+.login-top{
+    background: url(../images/back1.png) no-repeat;
+    background-size: 100% 2.5rem;
+    padding: 0.62rem 0 0.7rem 0;
+    color: #FD9821;
+    font-size: 0.24rem;
+}
+.login-top>img{
+    width: 1.13rem;
+    height: 1.17rem;
+    margin-bottom: 0.12rem;
+}
+.login-text{
+    margin-top: -0.12rem;
+    padding: 0 0.51rem 0.14rem 0.51rem;
+    font-size: 0.13rem;
+}
+.login-text a{
+    color: #333333;
+    width: 0.9rem;
+    margin-top: 0.33rem;
+}
+.tb-contont1 button{
+    margin-bottom: 0;
+}
+

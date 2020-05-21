@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../css/common.css">
+    <link rel="stylesheet" href="../css/login.css">
+    <script src="../js/resize.js"></script>
+    <script src="../js/jquery-3.4.1.min.js"></script>
+    <title>登錄</title>
+</head>
+<style>
+    .login-text a{
+        margin-left: 0.96rem;
+    }
+</style>
+<body>
+    <!-- 头部logo -->
+    <div class="login-top ta-c">
+        <img src="../images/new_logo.png" alt="">
+        <!-- <p>RFG</p> -->
+    </div>
+    <!-- 中间输入框 -->
+    <!-- <div class="inp">
+        <div class="inp1">
+            <img src="../images/phone.png" alt="">
+            <input type="text" placeholder="請輸入手機號碼">
+        </div>
+        <div class="inp2">
+            <img src="../images/suo.png" alt="">
+            <input type="text" placeholder="登錄密碼（6至12位數字和字母組合）">
+        </div>
+    </div> -->
+    <!-- 底部 -->
+    <!-- <div class="login-bot">
+        <div class="tb-contont1 ta-c">
+            <button>登錄</button>
+        </div>
+        <div class="login-text ov">
+            <p class="fl">忘記密碼?</p>
+            <p class="fr ta-r" onclick="goRegister()">注冊</p>
+        </div>
+    </div> -->
+
+    <form name="formlogin" id="loginForm" class="formlogin" method="post" action="" onsubmit="return delection()">
+        <!-- /Index/login_active.html -->
+        <div class="inp">
+            <div class="inp1 nickName">
+                <span class="input_bg_nick"></span>
+                <span class="input_fg"></span>
+                <img src="../images/phone.png" alt="">
+                <input type="text" class="input_nickName" name="username"
+                    style="border: 0px;outline:none;cursor: pointer;    box-shadow: none;" placeholder="請輸入手機號碼">
+            </div>
+            <div class="inp2 loginPwd">
+                <span class="input_bg_pass"></span>
+                <span class="input_fg"></span>
+                <img src="../images/suo.png" alt="">
+                <input type="password" class="input_loginPwd"
+                    style="border: 0px;outline:none;cursor: pointer;    box-shadow: none;" name="password"
+                    placeholder="登錄密碼（6至12位數字和字母組合）">
+            </div>
+        </div>
+        <div class="inde-reg2 login-bot" align="center">
+            <div class="tb-contont1 ta-c">
+                <button type="submit">登錄</button>
+            </div>
+            <div class="inde-reg reg-forget login-text ov">
+                <a href="getpass.html" class="fl">
+                    忘记密码?
+                </a>
+    
+                <!-- <a href="register.html" class="fr ta-r">
+                    注册
+                </a> -->
+            </div>
+        </div>
+        <br>
+    </form>
+</body>
+<script>
+    function goRegister() {
+        window.location.href = 'register.html'
+    }
+    function delection(){
+        if($('.input_nickName').val()==''){
+            alert("請輸入手機號碼")
+            return false;
+        }else if($('.input_loginPwd').val()==''){
+            alert("請輸入登錄密碼")
+            return false;
+        }
+    }
+</script>
+<script src="../js/jquery.validate.min.js"></script>
+<script src="../js/index.js"></script>
+
+</html>

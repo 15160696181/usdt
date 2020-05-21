@@ -1,0 +1,187 @@
+/* 右边 */
+	.home-center-right{
+		width: 936px;
+		margin-left: 30px;
+		float: left;
+		border: 1px solid rgba(229,229,229,1);
+	}
+	.home-center-right-top{
+		padding: 0;
+	}
+	.home-center-right-top-left{
+		padding: 10px 0 10px 19px;
+		float: left;
+		overflow: hidden;
+	}
+	.home-center-right-top-right{
+		padding: 12px 20px 11px 0;
+		float: right;
+		overflow: hidden;
+	}
+	.text-number{
+		font-size: 12px !important;
+		margin: -9px 0 0 2px;
+		color: #E64545 !important;
+	}
+	.select{
+		display: none;
+		float: left;
+		margin-right: 20px;
+	}
+	.select>p:nth-child(2){
+		margin: 0 20px;
+	}
+	.home-center-right-top p{
+		float: left;
+	}
+	.home-center-right-top-left p{
+		color: #999999;
+		font-size: 18px;
+	}
+	.home-center-right-top-right p{
+		font-size: 14px;
+		color: #999999;
+	}
+	.home-center-right-top-right>p:nth-of-type(1){
+		margin-right: 20px;
+	}
+	.home-center-right-top-left>p:nth-of-type(2n-1){
+		margin-left: 29px;
+	}
+	.home-center-right-top-left>p:nth-of-type(1){
+		margin-left: 0;
+	}
+	.home-center-right-bot-li,.home-center-right-bot-li1,.home-center-right-bot-li2{
+		border-bottom: 1px solid #E5E5E5;
+		padding: 19px 20px 18px 21px;
+		overflow: hidden;
+	}
+	.home-center-right-bot-li:nth-last-of-type(1),.home-center-right-bot-li1:nth-last-of-type(1),.home-center-right-bot-li2:nth-last-of-type(1){
+		border-bottom: 0;
+	}
+	.home-center-right-bot-li>img,.home-center-right-bot-li1>img,.home-center-right-bot-li2>img{
+		margin-top: 5px;
+	}
+	.home-center-right-bot-li>img,.home-center-right-bot-li-center,.home-center-right-bot-li1>img,.home-center-right-bot-li2>img{
+		float: left;
+	}
+	.home-center-right-bot-li>p,.home-center-right-bot-li1>p,.home-center-right-bot-li2>p{
+		float: right;
+	}
+	.home-center-right-bot-li>p>span,.home-center-right-bot-li1>p>span,.home-center-right-bot-li2>p>span{
+		color: #666666;
+		font-size: 14px;
+	}
+	.home-center-right-bot-li>p>span:nth-of-type(2),.home-center-right-bot-li1>p>span:nth-of-type(2),.home-center-right-bot-li2>p>span:nth-of-type(2){
+		margin-left: 5px;
+	}
+	.home-center-right-bot-li-center{
+		margin-left: 19px;
+	}
+	.home-center-right-bot-li-center>p:nth-of-type(1){
+		font-weight:bold;
+		margin-bottom: 9px;
+		color: #333333;
+		font-size: 16px;
+	}
+	.home-center-right-bot-li-center>p:nth-of-type(2),.home-center-right-bot-li-center>p:nth-of-type(3){
+		font-size: 14px;
+		color: #666666;
+	}
+	.home-center-right-bot-li-center-time{
+		float: left !important;
+		margin-left: 31px;
+	}
+	.btn{
+		float: right;
+		width:52px;
+		padding: 7px 0 6px 0;
+		font-size:12px;
+		font-weight:500;
+		color:rgba(255,255,255,1);
+		background:rgba(238,85,100,1);
+		border-radius:6px;
+		margin-top: 0px;
+	}
+	.btn-gray{
+		background: #D2D2D2;
+	}
+	
+	.checkBox{
+		display: none;
+		float: left;
+	}
+	.xitong-checkbox{
+		margin-left: 400px !important;
+	}
+	.tui-checkbox:checked {
+		background:red
+	}
+.tui-checkbox {
+	
+	width:25px;
+	height:25px;
+	background-color:#ffffff;
+	border:solid 1px #dddddd;
+	-webkit-border-radius:50%;
+	border-radius:50%;
+	font-size:0.8rem;
+	margin:0;
+	padding:0;
+	position:relative;
+	display:inline-block;
+	vertical-align:top;
+	cursor:default;
+	-webkit-appearance:none;
+	-webkit-user-select:none;
+	user-select:none;
+	-webkit-transition:background-color ease 0.1s;
+	transition:background-color ease 0.1s;
+	margin: 5px 0 0 538px;
+}
+.sixin-checkbox{
+	margin: -3px 0 0 470px;
+}
+.tui-checkbox:checked::after {
+	
+	content:'';
+	top:5px;
+	left:5px;
+	position:absolute;
+	background:transparent;
+	border:#fff solid 2px;
+	border-top:none;
+	border-right:none;
+	height:6px;
+	width:10px;
+	-moz-transform:rotate(-45deg);
+	-ms-transform:rotate(-45deg);
+	-webkit-transform:rotate(-45deg);
+	transform:rotate(-45deg);
+}
+
+.home-center-right-bot-btn{
+	display: none;
+	width: 936px;
+	margin-left: 30px;
+	text-align: center;
+	float: left;
+	margin-top: 40px;
+}	
+.cancelbtn,.deletebtn{
+	width:100px;
+	height:32px;
+	border-radius:6px;
+	border: 0;
+	font-size:16px;
+	line-height: 32px;
+}
+.cancelbtn{
+	margin-right: 40px;
+	background:rgba(229,229,229,1);
+	color:rgba(102,102,102,1);
+}	
+.deletebtn{
+	background:rgba(238,85,100,1);
+	color:rgba(255,255,255,1);
+}

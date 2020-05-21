@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/common.css">
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../css/accountSaft.css">
+    <script src="../js/resize.js"></script>
+    <title></title>
+</head>
+
+<body>
+    <div class="go-back accountSaft back-blue">
+        <!-- 头部 -->
+        <div class="accountSaft-top exchange-top">
+            <div class="ov">
+                <a href="./mine.html">
+                    <img class="fl" src="../images/left.png" alt="">
+                </a>
+                <p class="fl ta-c">賬戶安全</p>
+            </div>
+
+        </div>
+        <!-- 内容 -->
+        <div class="accountSaft-content">
+            <p class="ov" onclick="changePassword()">
+                <span class="fl">修改登錄密碼</span>
+                <img class="fr right" src="../images/left.png" alt="">
+            </p>
+            <p class="ov" onclick="fondPassword()">
+                <span class="fl">資金密碼</span>
+                <span class="fr">
+                    <span class="revamp">修改</span>
+                    <img class="right" src="../images/left.png" alt="">
+                </span>
+            </p>
+        </div>
+    </div>
+</body>
+<script>
+    function changePassword(){
+        window.location.href='changePassword.html'
+    }
+    function fondPassword(){
+        window.location.href='fondPassword.html'
+    }
+</script>
+
+</html>

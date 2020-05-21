@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/common.css">
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../css/register.css">
+    <script src="../js/resize.js"></script>
+    <script src="../js/jquery-3.4.1.min.js"></script>
+    <title>注冊</title>
+</head>
+
+<body>
+    <!-- 注册 -->
+    <div class="register ta-c">
+        <img src="../images/new_logo.png" alt="">
+        <!-- <p>英国皇家金融集团</p> -->
+    </div>
+    <!-- 中间输入框 -->
+    <!-- <div class="inp"> -->
+        <!-- <div class="inp1">
+            <img src="../images/phone.png" alt="">
+            <input type="text" placeholder="請輸入手機號碼">
+        </div> -->
+        <!-- <div class="inp2">
+            <img src="../images/duanxin.png" alt="">
+            <input type="text" placeholder="驗證碼">
+            <span>發送短信</span>
+        </div> -->
+        <!-- <div class="inp3">
+            <img src="../images/suo.png" alt="">
+            <input type="password" placeholder="設置密碼（6至12位數字和字母組合）">
+        </div> -->
+        <!-- <div class="inp4">
+            <img src="../images/suo.png" alt="">
+            <input type="password" placeholder="再次輸入新密碼">
+        </div> -->
+        <form class="form-horizontal" role="form" action="/index/register_save" onsubmit="return detection()" method="post">
+            <div class="inp">
+                <input type="hidden" name="post[reg_type]" value="1" />
+                <input type="hidden" name="post[tjuser_id]" value="" />
+                <table class="table_reg_form">
+                    <tr class="inp1">
+                        <!-- <th>手机号码：</th> -->
+                        <td class="td_input"><input type="text" class="form-control phone" name="post_info[mobile]"
+                                placeholder="請輸入手機號碼"></td>
+                        <td>
+                            <img class="img1" src="../images/phone.png" alt="">
+                        </td>
+                        <!-- <td class="td_msg">* 请认真填写手机号码，一旦填写不可修改</td> -->
+                        <td class="td_msg"></td>
+                    </tr>
+
+                    <tr class="inp2">
+                        <!-- <th>登录密码：</th> -->
+                        <td class="td_input"><input type="password" class="form-control password" name="post[user_pass]"
+                                placeholder="設置密碼（6至12位數字和字母組合）"></td>
+                        <td>
+                            <img class="img2" src="../images/suo.png" alt="">
+                        </td>
+                        <!-- <td class="td_msg">*</td> -->
+                    </tr>
+
+                    <tr class="inp3">
+                        <!-- <th>登录密码确认：</th> -->
+                        <td class="td_input"><input type="password" class="form-control againpassword" name="post[user_pass_re]"
+                                placeholder="再次輸入新密碼"></td>
+                        <td>
+                            <img class="img3" src="../images/suo.png" alt="">
+                        </td>
+                        <!-- <td class="td_msg">*</td> -->
+                    </tr>
+                </table>
+                <div class="form-actions tb-contont1">
+                    <button type="submit" class="">注冊</button>
+                </div>
+            </div>
+        </form>
+        <div class="register-text ta-c">
+            <!-- <a href="./login.html">返回登錄</a> -->
+        </div>
+    <!-- </div> -->
+    <!-- 底部按钮 -->
+    <!-- <div class="register-bot">
+        <div class="tb-contont1 ta-c">
+            <button>注冊</button>
+        </div>
+        <div class="register-text ta-c">
+            <a href="./login.html">返回登錄</a>
+        </div>
+    </div> -->
+</body>
+<script>
+    function detection(){
+        if($('.phone').val()==''){
+            alert("請輸入手機號碼")
+            return false;
+        }else if($('.password').val()==''){
+            alert('請輸入密碼')
+            return false;
+        }else if($('.againpassword').val()==''){
+            alert('請再次輸入密碼')
+            return false;
+        }
+    }
+</script>
+</html>

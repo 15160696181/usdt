@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/common.css">
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../css/ct_record.css">
+    <script src="../js/resize.js"></script>
+    <script src="../js/jquery-3.4.1.min.js"></script>
+    <title>收益明細</title>
+</head>
+<style>
+    .cut {
+        padding: 0.11rem 0.8rem 0.41rem 0.8rem;
+    }
+    .cut>p {
+        font-size: 0.16rem;
+        width: 1rem;
+        height: 0.35rem;
+        text-align: center;
+        line-height: 0.35rem;
+        border-radius: 0.17rem;
+        color: #FFFFFF;
+    }
+    .cut>p:nth-of-type(1) {
+        background: #FFFFFF;
+        color: #8923D9;
+        margin-right: 0.1rem;
+    }
+    .ct_record-content li{
+        padding: 0.15rem 0 0.07rem 0;
+    }
+    .ct_record-content li>div>div>p:nth-of-type(1){
+        color: #333333;
+    }
+    .ct_record-content li>div>div>p:nth-of-type(2){
+        margin-top: 0.08rem;
+    }
+    .ct_record-content li>div>p{
+        font-size: 0.16rem !important;
+        margin-top: 0.12rem;
+    }
+    .ct_record-content2{
+        display: none;
+    }
+</style>
+
+<body>
+    <div class="go-back ct_record">
+        <!-- 头部 -->
+        <div class="ct_record_top">
+            <div class="ov">
+                <a href="./home.html">
+                    <img class="fl" src="../images/left.png" alt="">
+                </a>
+                <p class="fl ta-c">收益明細</p>
+            </div>
+            <div class="cut ov">
+                <p class="fl">个人收益</p>
+                <p class="fl">团队收益</p>
+            </div>
+            <div class="time">
+                <p>篩選</p>
+                <div class="font-gray1 ov">
+                    <div class="col-xs-6 fl">
+                        <input readonly class="form-control" type="text" id="date-group1-2" placeholder="開始時間">
+                    </div>
+                    <span class="fl">至</span>
+                    <div class="col-xs-6 fl">
+                        <input readonly class="form-control" type="text" id="date-group1-3" placeholder="結束時間">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- 内容 -->
+        <div class="ct_record-content ct_record-content1">
+            <ul>
+                <li>
+                    <div class="ov">
+                        <div class="fl">
+                            <p>期数名称</p>
+                            <p>2020-02-02 13:12:15</p>
+                        </div>
+                        <p class="fr">
+                            <span class="font-yellow2">+100USDT</span>
+                        </p>
+                    </div>
+                </li>
+                <li>
+                    <div class="ov">
+                        <div class="fl">
+                            <p>期数名称</p>
+                            <p>2020-02-02 13:12:15</p>
+                        </div>
+                        <p class="fr">
+                            <span class="font-yellow2">+100USDT</span>
+                        </p>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <div class="ct_record-content ct_record-content2">
+            <ul>
+                <li>
+                    <div class="ov">
+                        <div class="fl">
+                            <p>期数名称</p>
+                            <p>2020-02-02 13:12:15</p>
+                        </div>
+                        <p class="fr">
+                            <span class="font-yellow2">+100USDT</span>
+                        </p>
+                    </div>
+                </li>
+                <li>
+                    <div class="ov">
+                        <div class="fl">
+                            <p>期数名称</p>
+                            <p>2020-02-02 13:12:15</p>
+                        </div>
+                        <p class="fr">
+                            <span class="font-yellow2">+100USDT</span>
+                        </p>
+                    </div>
+                </li>
+                <li>
+                    <div class="ov">
+                        <div class="fl">
+                            <p>期数名称</p>
+                            <p>2020-02-02 13:12:15</p>
+                        </div>
+                        <p class="fr">
+                            <span class="font-yellow2">+100USDT</span>
+                        </p>
+                    </div>
+                </li>
+                <li>
+                    <div class="ov">
+                        <div class="fl">
+                            <p>期数名称</p>
+                            <p>2020-02-02 13:12:15</p>
+                        </div>
+                        <p class="fr">
+                            <span class="font-yellow2">+100USDT</span>
+                        </p>
+                    </div>
+                </li>
+
+                <li>
+                    <div class="ov">
+                        <div class="fl">
+                            <p>期数名称</p>
+                            <p>2020-02-02 13:12:15</p>
+                        </div>
+                        <p class="fr">
+                            <span class="font-yellow2">+100USDT</span>
+                        </p>
+                    </div>
+                </li>
+                <li>
+                    <div class="ov">
+                        <div class="fl">
+                            <p>期数名称</p>
+                            <p>2020-02-02 13:12:15</p>
+                        </div>
+                        <p class="fr">
+                            <span class="font-yellow2">+100USDT</span>
+                        </p>
+                    </div>
+                </li>
+                <li>
+                    <div class="ov">
+                        <div class="fl">
+                            <p>期数名称</p>
+                            <p>2020-02-02 13:12:15</p>
+                        </div>
+                        <p class="fr">
+                            <span class="font-yellow2">+100USDT</span>
+                        </p>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+</body>
+<script src="../js/rolldate.min.js"></script>
+<script src="../js/choose_time.js"></script>
+<script src="../js/scroll.js"></script>
+<script>
+$('.cut>p:eq(0)').click(function(){
+    $(this).siblings().css({
+        background:'transparent',
+        color:'#FFFFFF'
+    })
+    $(this).css({
+        background:'#FFFFFF',
+        color:'#8923D9'
+    })
+    $('.ct_record-content1').show()
+    $('.ct_record-content2').hide()
+})
+$('.cut>p:eq(1)').click(function(){
+    $(this).siblings().css({
+        background:'transparent',
+        color:'#FFFFFF'
+    })
+    $(this).css({
+        background:'#FFFFFF',
+        color:'#8923D9'
+    })
+    $('.ct_record-content1').hide()
+    $('.ct_record-content2').show()
+})
+</script>
+
+</html>

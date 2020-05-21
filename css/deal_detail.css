@@ -1,0 +1,28 @@
+.deal_detail{
+    height: 100vh;
+}
+.exchange-top{
+    background: transparent;
+}
+.deal_detail_content{
+    margin: 0.1rem 0.15rem;
+    border-radius: 0.1rem;
+    background: #FFFFFF;
+    height: 5.5rem;
+    padding: 0.2rem 0.2rem 0 0.2rem;
+    font-size: 0.15rem;
+}
+.deal_detail_content img{
+    width: 0.37rem;
+    height: 0.37rem;
+    margin-right: 0.1rem;
+}
+.deal_detail_content p{
+    margin-top: 0.15rem;
+}
+.deal_detail_content p:nth-of-type(1){
+    margin-top: 0;
+}
+.deal_detail_content p:nth-of-type(2){
+    margin-top: 0.2rem;
+}

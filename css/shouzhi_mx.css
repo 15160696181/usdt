@@ -1,0 +1,65 @@
+/* 头部 */
+.shouzhi_mx_top{
+    background:linear-gradient(0deg,rgba(59,0,135,1) 0%,rgba(137,35,217,1) 100%);
+}
+.shouzhi_mx_top>div:nth-of-type(1){
+    padding: 0.14rem 0 0.16rem 0.15rem;
+}
+.shouzhi_mx_top>div:nth-of-type(1) img{
+    width: 0.23rem;
+    height: 0.25rem;
+}
+.shouzhi_mx_top>div:nth-of-type(1) p{
+    width: 85%;
+    color: #FFFFFF;
+    font-size: 0.18rem;
+    margin-top: -0.02rem;
+}
+.time{
+    padding: 0.12rem 0.43rem 0.6rem 0.43rem;
+}
+.time>p,.time>div span{
+    font-size: 0.15rem;
+    color: #FFFFFF;
+}
+.time>div{
+    margin-top: 0.11rem;
+}
+.time>div span{
+    margin: 0 0.11rem;
+    font-size: 0.15rem;
+}
+.form-control{
+    width: 1.25rem;
+    height: 0.3rem;
+    line-height: 0.3rem;
+    text-align: center;
+    border-radius: 0.15rem;
+    background: #FFFFFF;
+    border: 0;
+    font-size: 0.15rem;
+}
+/* 内容 */
+.shouzhi_mx-content{
+    border-radius: 0.3rem 0.3rem 0 0;
+    background: #FFFFFF;
+    padding: 0.2rem 0.2rem;
+    margin-top: -0.3rem;
+}
+.shouzhi_mx-content-top{
+    font-size: 0.16rem;
+}
+.shouzhi_mx-content span{
+    float: left;
+    width: 25%;
+    text-align: center;
+}
+.shouzhi_mx-content-bot{
+    font-size: 0.13rem;
+    margin-top: 0.14rem;
+    font-size: 0.13rem;
+    color: #666666;
+}
+.shouzhi_mx-content li{
+    margin-top: 0.08rem;
+}

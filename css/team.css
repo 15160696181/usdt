@@ -1,0 +1,83 @@
+/* 头部 */
+.team-top{
+    background:linear-gradient(0deg,rgba(129,18,214,1) 0%,rgba(162,81,225,1) 100%);
+}
+.team-top>div:nth-of-type(1){
+    padding: 0.14rem 0 0.16rem 0.15rem;
+}
+.team-top>div:nth-of-type(1) img{
+    width: 0.23rem;
+    height: 0.25rem;
+}
+.team-top>div:nth-of-type(1) p{
+    width: 85%;
+    color: #FFFFFF;
+    font-size: 0.18rem;
+    margin-top: -0.02rem;
+}
+.team-top-content{
+    width: 80%;
+    margin: auto;
+    padding: 0.12rem 0 0.4rem 0;
+}
+.team-top-content p{
+    color: #FFFFFF;
+    font-size: 0.15rem;
+}
+.team-top-content>p{
+    width: 50%;
+}
+.team-top-content>div{
+    width: 50%;
+}   
+.team-top-content>div>p{
+    margin-top: 0.19rem;
+    text-align: left;
+}
+/* 内容 */
+.team-content{
+    background: #FFFFFF;
+    border-radius: 0.3rem 0.3rem 0 0;
+    padding: 0 0.2rem;
+    margin: auto;
+    margin-top: -0.24rem;
+    margin-bottom: 0.5rem;
+}
+.team-content>div>p{
+    width: 25%;
+    text-align: center;
+    font-size: 0.16rem;
+    margin: 0.19rem 0 0.1rem 0;
+    float: left;
+}
+.team-content li p{
+    float: left;
+    width: 25%;
+    text-align: center;
+    font-size: 0.13rem;
+    color: #666666;
+}
+.team-content li{
+    margin-top: 0.1rem;
+}
+.team-content li:nth-of-type(1){
+    margin-top: 0;
+}
+/* 分页 */
+.paging{
+    position: fixed;
+    padding-bottom: 0.26rem;
+    bottom: 0;
+    width: 100%;
+    background: #FFFFFF;
+}
+.paging span{
+    font-size: 0.13rem;
+    color: #666666;
+}
+.paging span:nth-of-type(1),.paging span:nth-last-of-type(1){
+    margin-right: 0.2rem;
+}
+.paging span:nth-last-of-type(1){
+    margin-left: 0.2rem;
+}

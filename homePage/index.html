@@ -1,0 +1,173 @@
+
+<include file="Public:_header2" />
+<style type="text/css">
+	.Balance p{
+		/*
+		text-align: left !important;
+		*/
+		margin-left: 1.5rem;
+	}
+	.bg96{
+		background: url('__ROOT__/Public/jt/images/index/jy_header.png');
+		background-size: 100% auto ;
+
+	}
+	.cen_icon ul li{
+		padding: 4% 0;
+	}
+	.shaomZ .shaom p{
+		width:124px;
+
+	}
+	.menu_1{
+		width: 21px;
+		height:34px;
+		background: url('__PUBLIC__/jt/images/menu_home2.png') !important;
+		background-size: 100% 100% !important;
+	}
+	.menu_p1{
+		color: #F1BB0A !important;
+	}
+	.centBalance{
+		height: 75px;
+	}
+	.centBalance .dLine{
+		height: 68px;
+	}
+	
+</style>
+
+<div class="big_width100" >
+    <div class="w-index-header">
+	     <br></br>
+		<div class="shaomZ">
+		<a href="#" class="shaom">
+			<img src="/Public/jt/images/shaom-icon.png">			      
+			   		 <p>正在挖宝中...</p>
+			<!-- <p>{$Think.lang.ScanCode}</p> -->
+		</a>
+
+ 		</div>
+
+		<div class="centBalance">
+			<div class="Balance"><p><a class="balance" href="{:U('users/user_info2')}">矿沙：{$minfo.gd1_account}<br/><span class="yue">矿藏：{$minfo.gt1_account}</span><br/><span class="yue">消费：{$minfo.bp_jygx_account}</span>
+			</a></p></div>
+			<div style="width: 50%;" class="Balance"><p><a class="balance" href="{:U('users/user_info2')}">注册积分：{$minfo.gd2_account}<br/>以太积分：{$minfo.bt_account}<br/>通证帐户：{$minfo.bt2_account}</a></p></div>
+
+			<div class="dLine"></div>
+		</div>
+		<br>
+	</div>
+		<div class="slider" style="height:100px">
+			<ul class="slides">
+                <volist name=":get_ad(8)" id="va">
+				<li class="slide">
+                    <div class="box" ><img src="__ROOT__/{$va.img}" alt="{$va.info}" /></div>
+				</li>
+                </volist>
+			</ul>
+		</div>
+  
+	<div class="cen_icon" style="margin-top: 0; background: #222;">
+		<php>$quanxian=explode("-",$uinfo['quanxian']);</php>
+				<ul>
+					<li>
+						<if condition="in_array(2,$quanxian)">
+							<a href="###"   class="quanxian">
+						<else/>
+							<a href="{:U('Member/Account/turntable')}">
+						</if> 	 		
+							<img src="/Public/jt/images/index/icon-xia.png">
+							<p>通证钱包</p>
+						</a>
+					</li>
+					<li>
+						<if condition="in_array(1,$quanxian)">
+							<a href="###"   class="quanxian">
+						<else/>
+							<a href="javascript:void();" onclick="alert('对不起，功能未开通！')">
+						</if> 
+							<img src="/Public/jt/images/index/icon-shang.png">
+							<p>通证社区</p>
+						</a>
+					</li>
+					<li>
+						<if condition="in_array(3,$quanxian)">
+							<a href="###"   class="quanxian">
+						<else/>
+							<a href="{:U('Member/Market/turntable2')}">
+						</if> 
+							<img src="/Public/jt/images/index/icon-xiangzi.png">
+							<p>通证交易</p>
+						</a>
+					</li>
+					<li>
+						<if condition="in_array(4,$quanxian)">
+							<a href="###"   class="quanxian">
+						<else/>
+							<a href="{:U('member/users/tree_zzlb')}">
+						</if>
+							<img src="/Public/jt/images/index/icon-ok.png">
+							<p>通证节点</p>
+						</a>
+					</li>
+		           
+					<li>
+						<a href="###"   class="xianzjiaoy"> 
+							<a href="javascript:void();" onclick="alert('对不起，功能未开通！')">
+								<img src="/Public/jt/images/index/icon-zuan.png">
+								<p>通证快讯</p>
+							</a>
+						</li>
+		
+		
+				 <li>
+				 		
+						<a href="{:U('/Mall/Shop/Home/index')}">
+							<img src="/Public/jt/images/index/icon-cart.png">
+							<p>通证应用</p>
+						</a>
+						<!-- 
+						<a href="javascript:void();" onclick="alert('对不起，功能未开通！')">
+							<img src="/Public/jt/images/index/icon-cart.png">
+							<p>通证应用</p>
+						</a> -->
+					</li> 
+
+					<li></li><li></li><li></li><li></li>
+					<!-- <li>
+						<a href="###"   class="xianzjiaoy">
+							<a href="{:U('User/Sharecode')}">
+								<img src="/Public/jt/images/index/icon-liwu.png">
+								<p>V公益</p>
+							</a>
+					</li> -->
+					
+					<!-- <li>
+						<a href="###"   class="xianzjiaoy">
+							<a href="{:U('Index/exehange')}">
+								<img src="/Public/jt/images/index/icon-juxing.png">
+								<p>V贷</p>
+							</a>
+					</li> -->
+
+
+					<!-- <li>
+						<a href="###"   class="xianzjiaoy">
+							
+								<img src="/Public/jt/images/index/icon-geren.png">
+								<p>信用</p>
+							</a>
+					</li> -->
+		
+				</ul>
+				
+		</div>
+
+</div>
+
+<include file="Public:_footer2" />
+
+
+
+

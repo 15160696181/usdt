@@ -1,0 +1,46 @@
+.invite{
+    background: url(../images/back2.png) no-repeat;
+    background-size: 100% 100%;
+    width: 100%;
+    height: 100vh;
+}
+.exchange-top{
+    background: transparent;
+}
+/* 内容 */
+.attestation-content>img{
+    width: 0.91rem;
+    height: 0.94rem;
+    margin-top: 0.35rem;
+}
+.attestation-content>div>p{
+    font-size: 0.12rem;
+    color: #FFFFFF;
+    margin-top: 0.08rem;
+}
+.attestation-content>div{
+    width: 3.26rem;
+    height: 2.65rem;
+    text-align: center;
+    background: url(../images/code-back.png) no-repeat;
+    background-size: 100% 100%;
+    margin-top: 0.65rem;
+    padding-top: 0.35rem;
+}
+.code{
+    width: 1.5rem;
+    height: 1.5rem;
+    margin-left: 25%;
+    padding: 0.05rem;
+    background: #FFFFFF;
+}
+.code>canvas{
+    width: 100%;
+    height: 100%;
+}
+.attestation-content button{
+    width: 80%;
+    padding: 0.12rem 0;
+    font-size: 0.18rem;
+    margin: 0 0 0.3rem 0;
+}

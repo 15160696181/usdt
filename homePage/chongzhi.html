@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/common.css">
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../css/chongzhi.css">
+    <script src="../js/resize.js"></script>
+    <!-- <link rel="stylesheet" href="../js/mui.min.js"> -->
+    <script src="../js/jquery-3.4.1.min.js"></script>
+    <!-- <script src="../js/mui.min.js"></script> -->
+    <script src="../js/jquery.qrcode.min.js"></script>
+    <title>充幣</title>
+</head>
+
+<body>
+    <div class="cz back-blue">
+        <!-- 头部 -->
+        <div class="cz-top ov">
+            <div class="fl">
+                <a href="./home.html"><img src="../images/left.png" alt=""></a>
+            </div>
+            <div class="fl ta-c">
+                <p>充幣</p>
+            </div>
+            <div class="fl ta-r goChongzhiRrcord">
+                <p>充幣記錄</p>
+            </div>
+        </div>
+        <!-- 切换 -->
+        <!-- <div class="cut ov">
+            <p class="fl">二維碼充值</p>
+            <p class="fl">凴証充值</p>
+        </div> -->
+        <!-- 中间 -->
+        <!-- 二维码充值 -->
+        <div class="code-cz">
+            <div class="cz-center ta-c">
+                <div class="code"></div>
+                <p class="font-black">充幣地址</p>
+                <!-- <p class="font-gray1 copy_text">ghghis......a875666</p> -->
+                <input type="text" readonly="true" name="address" class="inp_address" value="dsfdsfdsgsdfds">
+                <button onclick="copy()">複製地址</button>
+            </div>
+        </div>
+        <!-- 凭证充值 -->
+        <div class="pz-cz">
+            <form action="" method="">
+                <div class="exchange-content">
+                    <p>USDT數量</p>
+                    <div>
+                        <input type="text" placeholder="請輸入充幣數量">
+                    </div>
+                    <p>充值凴證</p>
+                    <div>
+                        <input type="text" placeholder="請輸入兌換數量">
+                        <p>獲取凴証</p>
+                    </div>
+                    <div>
+                        <p>
+                            <span>
+                                上傳憑證（圖片縂大小
+                            </span>
+                            <span class="font-red1">
+                                5M
+                            </span>
+                            <span>
+                                以下）
+                            </span>
+                        </p>
+                        <div class="ov add_image">
+                            <p class="fl">
+                                <input type="file" id="imgfile" name="imgfile" />
+                                <img src="../images/add.png" alt="">
+                            </p>
+                            <div class="imgup">
+                                <img src="" class="fl" alt="" id="img">
+                            </div>
+                        </div>
+                    </div>
+                    <p>
+                        <span>
+                            您需支付金額：
+                        </span>
+                        <span class="font-yellow1">0.00</span>
+                        <span>
+                            元
+                        </span>
+                    </p>
+                    <button class="btn">確定充值</button>
+                </div>
+            </form>
+        </div>
+        <!-- 底部 -->
+        <div class="cz-bot">
+            <p>充幣須知</p>
+            <p><span>1、</span><span>
+                    文字文字文字文字文字文字文字文字文字文字文字文
+                    字文字文字文字文字。
+                </span></p>
+            <p><span>2、</span><span>
+                    文字文字文字文字文字文字文字文字文字文字文字文
+                    字文字文字文字文字。
+                </span></p>
+        </div>
+        <div class="mask"></div>
+        <div class="choose">
+            <p>拍照</p>
+            <p>相冊</p>
+            <p onclick="cancel()">取消</p>
+        </div>
+    </div>
+</body>
+<script src="../js/scroll.js"></script>
+<script>
+    $('.goChongzhiRrcord').click(function () {
+        window.location.href = 'chongzhi_record.html'
+    })
+    var url = "www.baidu.com";
+    jQuery('.code').qrcode(url);
+    // 复制
+    function copy() {
+        var Url2 = $('.copy_text');
+        Url2.select();
+        document.execCommand("Copy"); // 执行浏览器复制命令
+        alert("复制成功");
+    }
+    var imgfile = document.querySelector('#imgfile');
+    imgfile.onchange = function () {
+        var my_file = this.files[0];
+        var reader = new FileReader();
+        reader.readAsDataURL(my_file);
+        reader.onload = function () {
+            console.log(this.result);
+            $('#img').attr('src',this.result) 
+        }
+    }
+    function addImage() {
+        $('.mask').show()
+        $('.choose').show()
+        // document.body.addEventListener('touchmove', function (e) {
+        //     e.preventDefault();
+        // }, { passive: false });
+    }
+    function cancel() {
+        $('.mask').hide()
+        $('.choose').hide()
+        // document.body.removeEventListener('touchmove', function (e) {
+        //     e.preventDefault();
+        // }, { passive: false });
+    }
+    // var phoneHeight = document.body.clientHeight;
+    // if (phoneHeight <= 480) {
+    //     $('.cz').height('100%')
+    // }
+    // $('.cut p:eq(0)').click(function(){
+    //     $('.code-cz').show()
+    //     $('.pz-cz').hide()
+    //     $('.cut p:eq(0)').css({
+    //         background:'#FFFFFF',
+    //         color:'#8923D9'
+    //     })
+    //     $('.cut p:eq(1)').css({
+    //         background:'transparent',
+    //         color:'#FFFFFF'
+    //     })
+    // })
+    // $('.cut p:eq(1)').click(function(){
+    //     $('.code-cz').hide()
+    //     $('.pz-cz').show()
+    //     $('.cut p:eq(0)').css({
+    //         background:'transparent',
+    //         color:'#FFFFFF'
+    //     })
+    //     $('.cut p:eq(1)').css({
+    //         background:'#FFFFFF',
+    //         color:'#8923D9'
+    //     })
+    // })
+    // document.getElementById('getImage').addEventListener('tap', getImage);
+    // document.getElementById('getAlbum').addEventListener('tap', getAlbum);
+    function getAlbum() {
+        plus.gallery.pick(function (path) {
+            console.log(path)
+            compress(path);
+        }, function (e) {
+            outSet('取消选择图片');
+        }, { filter: 'image' });
+    }
+    function getImage() {
+        var cmr = plus.camera.getCamera();
+        cmr.captureImage(function (p) {
+            //console.log('成功：'+p);
+            plus.io.resolveLocalFileSystemURL(p, function (entry) {
+                //                          createItem(entry);
+                var path = entry.toLocalURL();
+                compress(path);
+            }, function (e) {
+                //alert('读取拍照文件错误：'+e.message);
+                mui.toast('读取拍照文件错误：' + e.message, { duration: 'long', type: 'div' });
+            });
+        }, function (e) {
+            //                      alert('失败：'+e.message);
+        }, { filename: '_doc/camera/', index: 1 });
+    }
+    var size = null;
+    var index = 1;
+    function compress(path) {
+        var name = path.substr(path.lastIndexOf('/') + 1);
+        plus.zip.compressImage({
+            src: path,
+            dst: '_doc/' + name,
+            overwrite: true,
+            quality: 50
+        }, function (zip) {
+            size += zip.size
+            //console.log("filesize:"+zip.size+",totalsize:"+size);
+            if (size > (10 * 1024 * 1024)) {
+                return mui.toast('文件超大');
+            }
+            //console.log(JSON.stringify(zip));
+            var imgparent = document.createElement('div');
+            var closeimg = document.createElement('div');
+            closeimg.setAttribute('class', 'img-close mui-icon mui-icon-closeempty');
+            var id = 'credentialimg-' + index;
+            closeimg.id = id;
+            imgparent.setAttribute('class', 'img-item');
+            var img = document.createElement('img');
+            img.src = zip.target;
+            img.width = 40;
+            img.height = 40;
+            img.style.margin = '5px';
+            img.style.marginBottom = '0';
+            //                          img.setAttribute('onclick', 'displayFile(this.src)');
+            var div = document.getElementById('userfile');
+            imgparent.appendChild(img);
+            imgparent.appendChild(closeimg);
+            div.appendChild(imgparent);
+            upload(zip.target, id);
+            index++;
+        }, function (zipe) {
+            mui.toast('压缩失败！')
+        });
+    }
+    function upload(path, id) {
+        var url = "url";
+        if (path == '') {
+            plus.nativeUI.alert("没有添加上传文件！");
+            return;
+        }
+        var wt = plus.nativeUI.showWaiting();
+        var flag = false;
+        var mask = mui.createMask(function () {
+            return flag;
+        });
+        mask.show();//显示遮罩 
+        var task = plus.uploader.createUpload(url,
+            { method: "POST" },
+            function (t, status) { //上传完成
+                if (status == 200) {
+                    wt.close();
+                    flag = true;
+                    mask.close();
+                    //                          alert("上传成功："+t.responseText);
+                    //mui.toast('上传成功',{ duration:'long', type:'div' });
+                    var name = JSON.parse(t.responseText).uqfileid;
+                    files[id] = name;
+                    //console.log('name'+name);
+                    jQuery('#' + id).attr('name', name);
+                    //console.log(jQuery('#'+id).attr('name'));
+                    //console.log(JSON.stringify(files));
+                } else {
+                    //alert("上传失败："+status);
+                    mui.toast("上传失败：" + status, { duration: 'long', type: 'div' });
+                }
+            }
+        );
+        task.addData("client", "file");
+        task.addData("uid", getUid());
+        task.addFile(path, { key: 'uploadkey' });
+        task.start();
+    }
+    function getUid() {
+        return Math.floor(Math.random() * 100000000 + 10000000).toString();
+    }
+    // 预览图删除功能
+    jQuery('#userfile').on('click', '.img-close', function (e) {
+        var id = e.target.id;
+        var name = jQuery('#' + id).attr('name');
+        var parent = $('#' + id).parent();
+        //console.log('closename'+name);
+        parent.remove();
+        if (name != '') {
+            delete files[id];
+            //console.log(JSON.stringify(files));
+        }
+    });
+    jQuery('#userfile').on('click', 'img', function (e) {
+        var src = e.target.src;
+        var name = e.target.name;
+        //console.log('src'+src)
+        //console.log('name'+name)
+        var data = '';
+        if (src != undefined && name != '') {
+            data = name
+        } else if (src != undefined && name == '') {
+            data = src
+        }
+        //console.log(src)
+        displayFile(data);
+    });
+    var w = null;
+    function displayFile(src) {
+        if (w) {
+            //alert('重复点击！');
+            mui.toast('重复点击', { duration: 'long', type: 'div' });
+            return;
+        }
+        if (!src) {
+            //alert('无效的媒体文件');
+            mui.toast('无效的媒体文件', { duration: 'long', type: 'div' });
+            return;
+        }
+        var name = src;
+        //console.log(name);
+        var suffix = name.substr(name.lastIndexOf('.'));
+        var url = '';
+        if (suffix == '.mov' || suffix == '.3gp' || suffix == '.mp4' || suffix == '.avi') {
+            //if(unv){plus.runtime.openFile('_doc/camera/'+name);return;}
+            url = '/plus/camera_video.html';
+        } else {
+            url = '/plus/camera_image.html';
+        }
+        w = plus.webview.create(url, url, { hardwareAccelerated: true, scrollIndicator: 'none', scalable: true, bounce: 'all' });
+        w.addEventListener('loaded', function () {
+            w.evalJS('loadMedia("' + src + '")');
+            //w.evalJS('loadMedia("'+'http://localhost:13131/_doc/camera/'+name+'")');
+        }, false);
+        w.addEventListener('close', function () {
+            w = null;
+        }, false);
+        w.show('slide-in-right');
+    }
+</script>
+
+</html>

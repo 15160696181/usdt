@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/common.css">
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../css/invite.css">
+    <script src="../js/resize.js"></script>
+    <script src="../js/jquery-3.4.1.min.js"></script>
+    <script src="../js/jquery.qrcode.min.js"></script>
+    <script src="../js/html2canvas.js"></script>
+    <script src="../js/html2canvas.min.js"></script>
+    <title>邀請好友</title>
+</head>
+
+<body>
+    <div class="go-back invite">
+        <!-- 头部 -->
+        <div class="exchange-top ov">
+            <a href="./mine.html">
+                <img class="fl" src="../images/left.png" alt="">
+            </a>
+            <p class="fl ta-c">邀請好友</p>
+        </div>
+        <!-- 中间内容 -->
+        <div class="attestation-content ta-c"> 
+            <img src="../images/new_logo.png" alt="">
+            <!-- <img class="code" src="../images/code-er.jpg" alt=""> -->
+            <div>
+                <div class="code"></div>
+                <p>掃一掃二維碼 立即下載APP</p>
+            </div>
+            <button class="btn" onclick="downloadClick()">保存到相冊</button>
+        </div>
+    </div>
+</body>
+<script src="../js/scroll.js"></script>
+<script>
+    var phoneHeight = document.body.clientHeight;
+    if (phoneHeight <= 480 || phoneHeight >= 1024) {
+        $('.invite').height('100%')
+    }
+    if (phoneHeight >= 812) {
+        $('.attestation-content>div').css({
+            marginTop: '1.8rem'
+        })
+    }
+    var url = 'http://usdt.linxinjie.com/index/register?tj_id=1';
+    $('.code').qrcode(url);
+    function downloadClick() {
+        var data = $("canvas")[0].toDataURL().replace("image/png", "image/octet-stream;"); //获取二维码值，并修改响应头部。　　
+        var filename = "load.png"; //保存的图片名称和格式
+        var saveLink = document.createElementNS('http://www.w3.org/1999/xhtml', 'a');
+        saveLink.href = data;
+        saveLink.download = filename;
+        var event = document.createEvent('MouseEvents');
+        event.initMouseEvent('click', true, false, window, 0, 0, 0, 0, 0, false, false, false, false, 0, null);
+        saveLink.dispatchEvent(event);
+    }
+
+    /**
+
+     * 根据window.devicePixelRatio获取像素比
+
+     */
+
+    function DPR() {
+
+        if (window.devicePixelRatio && window.devicePixelRatio > 1) {
+
+            return window.devicePixelRatio;
+
+        }
+
+        return 1;
+
+    }
+
+    /**
+    
+    *  将传入值转为整数
+    
+    */
+
+    function parseValue(value) {
+
+        return parseInt(value, 10);
+
+    };
+
+    /**
+    
+    * 绘制canvas
+    
+    */
+
+    async function drawCanvas(selector) {
+
+        // 获取想要转换的 DOM 节点
+
+        const dom = document.querySelector(selector);
+
+        const box = window.getComputedStyle(dom);
+
+        // DOM 节点计算后宽高
+
+        const width = parseValue(box.width);
+
+        const height = parseValue(box.height);
+
+        // 获取像素比
+
+        const scaleBy = DPR();
+
+        // 创建自定义 canvas 元素
+
+        var canvas = document.createElement('canvas');
+
+        // 设定 canvas 元素属性宽高为 DOM 节点宽高 * 像素比
+
+        canvas.width = width * scaleBy;
+
+        canvas.height = height * scaleBy;
+
+        // 设定 canvas css宽高为 DOM 节点宽高
+
+        canvas.style.width = `${width}px`;
+
+        canvas.style.height = `${height}px`;
+
+
+
+        // 获取画笔
+
+        const context = canvas.getContext('2d');
+
+
+
+        // 将所有绘制内容放大像素比倍
+
+        context.scale(scaleBy, scaleBy);
+
+
+
+        let x = width;
+
+        let y = height;
+
+        return await html2canvas(dom, { canvas }).then(function () {
+
+            convertCanvasToImage(canvas, x, y)
+
+        })
+
+    }
+
+
+
+    /**
+    
+    * 图片转base64格式
+    
+    */
+
+    function convertCanvasToImage(canvas, x, y) {
+
+        let image = new Image();
+        image.crossOrigin='Anonymous';
+        
+        let _container = document.getElementsByClassName('invite')[0];
+
+        let _body = document.getElementsByTagName('body')[0];
+
+        image.width = x;
+
+        image.height = y;
+        console.log(image)
+        image.src = canvas.toDataURL("image/png");
+        console.log(image)
+        _body.removeChild(_container);
+
+        document.body.appendChild(image);
+
+        return image;
+
+    }
+
+    drawCanvas('.invite')
+
+</script>
+
+</html>

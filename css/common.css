@@ -1,0 +1,443 @@
+/* 公共样式 */
+/* 浮动 */
+body{
+    font-family:Source Han Sans CN !important;
+    width: 100%;
+    height: 100%;
+}
+*{
+    padding: 0;
+    margin: 0;
+}
+a:hover,a:focus,a:link,a:visited,a:active { text-decoration: none !important;}
+.fl{
+    float: left;
+}
+.fr{
+    float: right;
+}
+.ov{
+    overflow: hidden;
+}
+/* 字体颜色 */
+.font-blue{
+    color: #8112D6;
+}
+.font-blue1{
+    color: #8922D9;
+}
+.font-blue2{
+    color: #9333FF;
+}
+.font-blue3{
+    color: #8418D7 !important;
+}
+.font-blue4{
+    color: #A14EE1;
+}
+.font-gray{
+    color: #CCCCCC;
+}
+.font-black{
+    color: #333333;
+}
+.font-gray1{
+    color: #666666 !important;
+}
+.font-gray2{
+    color: #999999;
+}
+.font-red{
+    color: #FF0062;
+}
+.font-red1{
+    color: #FF0067;
+}
+.font-red2{
+    color: #FF3989;
+}
+.font-red3{
+    color: #FF0000;
+}
+.font-red4{
+    color: #FF0014;
+}
+.font-red5{
+    color: #FF287F;
+}
+.font-red6{
+    color: #FF277F;
+}
+.font-yellow{
+    color: #FFB831;
+}
+.font-yellow1{
+    color: #FFB72C;
+}
+.font-yellow2{
+    color: #FFB62A !important;
+}
+.font-yellow3{
+    color: #F5A417;
+}
+.font-green{
+    color: #1BB935;
+}
+/* 居中 */
+.ta-c{
+    text-align: center;
+}
+.ta-l{
+    text-align: left;
+}
+.ta-r{
+    text-align: right;
+}
+/* 背景色 */
+.back-blue{
+    background:linear-gradient(0deg,rgba(59,0,135,1) 0%,rgba(137,35,217,1) 100%);
+    width: 100%;
+    height: 100%;
+}
+.back-blue1{
+    background: rgba(147,51,255,1);
+}
+.back-blue2{
+    background:linear-gradient(90deg,rgba(129,18,214,1) 0%,rgba(162,81,225,1) 100%);
+}
+.back-red{
+    background:rgba(255,57,137,1);
+}
+.back-red1{
+    background:linear-gradient(90deg,rgba(255,39,127,1) 0%,rgba(255,83,153,1) 100%);
+}
+.back-yellow{
+    background:linear-gradient(90deg,rgba(255,181,40,1) 0%,rgba(255,198,88,1) 100%);
+}
+.back-gray{
+    background: #999999 !important;
+}
+/* 超出部分省略号显示 */
+.ellipsis{
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+/* 充值提币转账头部 */
+.cz-top{
+    position: sticky;
+    top: 0;
+    /* background: rgba(137,35,217,1); */
+    padding: 0.1rem 0.15rem 0.1rem 0.08rem;
+    z-index: 10;
+}
+.cz-top img{
+    width: 0.25rem;
+    height: 0.25rem;
+}
+.cz-top>div{
+    width: 33.33%;
+    color: #FFFFFF;
+}
+.cz-top>div:nth-of-type(2) p{
+    font-size: 0.18rem;
+}
+.cz-top>div:nth-of-type(3) p{
+    font-size: 0.15rem;
+    margin-top: 0.03rem;
+}
+/* 图片上传 */
+.add_image p{
+    width: 0.75rem;
+    height: 0.75rem;
+    text-align: center;
+    background: #FFFFFF;
+    border-radius: 0.1rem;
+    line-height: 0.75rem;
+    margin-top: 0.14rem;
+    position: relative;
+}
+.add_image p img{
+    position: absolute;
+    top: 0.25rem;
+    left: 0.25rem;
+    width: 0.25rem;
+    height: 0.25rem;
+}
+#imgfile,#imgfile1{
+    opacity: 0;
+    z-index: 10;
+    width: 0.75rem;
+    height: 0.75rem;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+#img,#img1{
+    width: 0.75rem;
+    height: 0.75rem;
+    margin: 0.14rem 0 0 0.1rem;
+    border-radius: 0.1rem;
+}
+/* 遮罩 */
+.mask{
+    background:rgba(0,0,0,1);
+    opacity:0.5;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: none;
+    z-index: 15;
+}
+/* 提币转账头部 */
+.tb{
+    width: 100%;
+    height: 2.5rem;
+    background:linear-gradient(0deg,rgba(59,0,135,1) 0%,rgba(137,35,217,1) 100%);
+}
+.tb-center>p{
+    color: #FFFFFF;
+}
+.tb-center>p:nth-of-type(1){
+    margin: 0.3rem 0 0.12rem 0;
+    font-size: 0.15rem;
+}
+.tb-center>p:nth-of-type(2){
+    font-size: 0.24rem;
+}
+/* 转账提币中间内容部分 */
+.tb-contont{
+    width: 92%;
+    margin: auto;
+    margin-top: -0.9rem;
+    border-radius: 0.1rem;
+    background: #FFFFFF;
+}
+.tb-contont1{
+    padding: 0 0.22rem;
+}
+.tb-contont1>div>p:nth-of-type(1){
+    font-size: 0.15rem;
+}
+.tb-contont input,.inp input{
+    border: 0;
+    border-bottom: 0.01rem solid #CCCCCC !important;
+    width: 3rem;
+    padding: 0.09rem 0;
+    font-size: 0.14rem;
+    color: #666666 !important;
+}
+.tb-contont-layout1,.tb-contont-layout2{
+    position: relative;
+}
+.tb-contont1 button{
+    padding: 0.12rem 1.1rem;
+    color: #FFFFFF;
+    background:linear-gradient(90deg,rgba(129,18,214,1) 0%,rgba(162,81,225,1) 100%);
+    border: 0;
+    font-size: 0.15rem;
+    border-radius: 0.25rem;
+    margin: auto;
+    margin-bottom: 0.33rem;
+}
+/* 登录注册中输入框 */
+.inp{
+    padding: 0 0.37rem;
+    margin: 0.45rem 0 0.59rem 0;
+}
+.inp input{
+    padding: 0 0 0.14rem 0.51rem !important;
+    width: 2.49rem !important;
+    font-size: 0.15rem;
+    color: #999999 !important;
+}
+.inp>div{
+    position: relative;
+}
+.inp img{
+    position: absolute;
+    left: 0.06rem;
+    width: 0.25rem;
+    height: 0.25rem;
+}
+.inp1 img{
+    bottom: 0.13rem;
+}
+.inp2{
+    margin-top: 0.38rem;
+}
+.inp2 img{
+    bottom: 0.1rem;
+}
+.tb-contont1 button{
+    /* padding: 0.13rem 1.35rem; */
+}
+/* 头部返回 */
+.exchange-top{
+    padding: 0.1rem 0 0.12rem 0.12rem;
+    position: sticky;
+    /* width: 100%; */
+    top: 0;
+    background:linear-gradient(0deg,rgba(137,35,217,1) 0%,rgba(59,0,135,1) 100%);
+    z-index: 10;
+}
+.exchange-top img{
+    width: 0.23rem;
+    height: 0.25rem;
+}
+.exchange-top p{
+    width: 87%;
+    color: #FFFFFF;
+    font-size: 0.18rem;
+    margin-top: -0.02rem;
+}
+.ct_record_top>div:nth-of-type(1),.shouzhi_mx_top>div:nth-of-type(1){
+    position: sticky;
+    top: 0;
+}
+/* 交易 */
+/* 未买入 */
+.deal_content1{
+    padding: 0.17rem 4% 0.1rem 4%;
+}
+.deal_content1 li{
+    padding: 0.14rem 0.18rem 0.17rem 0.15rem;
+    background: #FFFFFF;
+    border-radius: 0.1rem;
+    font-size: 0.15rem;
+}
+.deal_content1 li{
+    margin-top: 0.1rem;
+}
+.deal_content1 li:nth-of-type(1){
+    margin-top: 0;
+}
+.deal_content1 li p:nth-of-type(1) span:nth-of-type(1){
+    font-size: 0.16rem;
+}
+.deal_content1 li p:nth-of-type(1) span:nth-of-type(2){
+    font-size: 0.13rem;
+    display: inline-block;
+    margin-top: 0.02rem;
+}
+.deal_content1 li p:nth-of-type(2){
+    margin: 0.18rem 0 0.08rem 0;
+}
+.deal_content1 li p:nth-of-type(4)>span:nth-of-type(1){
+    margin-top: 0.08rem;
+}
+.deal_content1 li p:nth-of-type(4)>span:nth-of-type(2){
+    background:linear-gradient(90deg,rgba(129,18,214,1) 0%,rgba(162,81,225,1) 100%);
+    box-shadow:0px 0.02 0.05rem 0px rgba(147,51,255,0.4);
+    border-radius:0.15rem;
+    color: #FFFFFF;
+    width: 1rem;
+    height: 0.3rem;
+    line-height: 0.3rem;
+}
+/* 日期插件 */
+.rolldate-container .rolldate-panel{
+    height: 2.73rem !important;
+}
+.rolldate-container .rolldate-btn{
+    padding: 0 0.1rem !important;
+    font-size: 0.15rem !important;
+    color: #9A41DE !important;
+}
+.rolldate-container header{
+    line-height: 0.4rem !important;
+    font-size: 0.16rem !important;
+    border-bottom: 0 !important;
+}
+.rolldate-container{
+    font-size: 0.2rem !important;
+}
+.rolldate-container .rolldate-confirm{
+    color: #9A41DE !important;
+}
+/* 按钮 */
+.btn,.btn_cz{
+    background:linear-gradient(90deg,rgba(255,39,127,1) 0%,rgba(255,83,153,1) 100%);
+    border-radius:0.22rem;
+    border: 0;
+    font-size: 0.15rem;
+    color: #FFFFFF;
+    padding: 0.12rem 1.46rem;
+}
+/* 修改密码实名认证问题反馈公共部分 */
+.attestation-content{
+    padding: 0 0.3rem;
+    margin-top: -0.1rem;
+}
+.attestation-content>div>p{
+    color: #FFFFFF;
+    font-size: 0.15rem;
+    margin-bottom: 0.12rem;
+}
+.attestation-content>div input{
+    border: 0;
+    width: 92%;
+    border-radius: 0.1rem;
+    padding: 0.13rem 0 0.13rem 0.25rem;
+    color: #666666;
+    font-size: 0.15rem;
+}
+.attestation-content>div{
+    margin-top: 0.15rem;
+}
+.attestation-content3 div{
+    margin: auto;
+    width: 70%;
+    border-radius: 0.1rem;
+    background: #FFFFFF;
+    padding: 0.27rem 0 0.25rem 0;
+}
+.attestation-content3 div img{
+    width: 0.33rem;
+    height: 0.28rem;
+}
+.attestation-content3 div p{
+    color: #666666;
+    font-size: 0.15rem;
+    margin-top: 0.2rem;
+}
+.attestation-content3 div:nth-of-type(2){
+    margin-top: 0.15rem;
+}
+.attestation-content>button{
+    margin: 0.3rem 0;
+    padding: 0.12rem 1.38rem;
+}
+/* 底部固定 */
+.home-footer{
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background:rgba(255,255,255,1);
+    z-index: 1000;
+}
+.home-footer a{
+    width: 33.33%;
+    text-align: center;
+}
+.home-footer a p{
+    font-size: 0.11rem;
+    margin-bottom: 0.02rem;
+}
+.footer-img1{
+    width: 0.38rem;
+    height: 0.38rem;
+    margin: 0.01rem 0 -0.05rem;
+}
+.footer-img2{
+    width: 0.26rem;
+    height: 0.28rem;
+    margin: 0.03rem 0 0.04rem;
+}
+.footer-img3{
+    width: 0.28rem;
+    height: 0.28rem;
+    margin: 0.03rem 0 0.04rem;
+}

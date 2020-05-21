@@ -1,0 +1,89 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../css/common.css">
+    <link rel="stylesheet" href="../../css/reset.css">
+    <link rel="stylesheet" href="../../css/deal_lobby.css">
+    <script src="../../js/resize.js"></script>
+    <script src="../../js/jquery-3.4.1.min.js"></script>
+    <title>交易大廳</title>
+</head>
+<body>
+    <div class="deal_lobby back-blue">
+        <!-- 头部 -->
+        <div class="cz-top ov">
+            <div class="fl">
+                <a onclick="goBack()"><img src="../../images/left.png" alt=""></a>
+            </div>
+            <div class="fl ta-c">
+                <p>交易大廳</p>
+            </div>
+            <div class="fl ta-r" onclick="goDealRecord()">
+                <p>交易記錄</p>
+            </div>
+        </div>
+        <!--  内容 -->
+        <div class="deal_content">
+            <div class=" ov">
+                <div class="fr">
+                    <p>
+                        <span>幣種：</span>
+                        <span>USDT</span>
+                    </p>
+                    <p>
+                        <span>發行量：</span>
+                        <span>21,000,000</span>
+                    </p>
+                    <p>
+                        <span>市價：</span>
+                        <span>￥10.00</span>
+                    </p>
+                    <p>
+                        <span>市值：</span>
+                        <span>￥10.00</span>
+                    </p>
+                    <button onclick="buy()">買入</button>
+                    <button onclick="sell()">售出</button>
+                </div>
+            </div>
+            
+        </div>
+        
+    </div>
+</body>
+<script>
+    var url = location.search; //获取url中"?"符后的字串  
+    var theRequest = new Object();
+    if (url.indexOf("?") != -1) {
+        var str = url.substr(1); //substr()方法返回从参数值开始到结束的字符串；  
+        var strs = str.split("&");
+        for (var i = 0; i < strs.length; i++) {
+            theRequest[strs[i].split("=")[0]] = (strs[i].split("=")[1]);
+        }
+        console.log(theRequest.code); //此时的theRequest就是我们需要的参数；  
+    }
+    function goBack() {
+        var key=localStorage.getItem('key')
+        if(key==0){
+            window.location.href='../home.html'
+        }else{
+            window.location.href='../../takeOrders/takeOrders.html'
+        }
+    }
+    function sell(){
+        window.location.href="sell_set.html"
+    }
+    function goDealRecord(){
+        window.location.href="deal_record.html"
+    }
+    function buy(){
+        window.location.href='buy.html'
+    }
+    
+</script>
+
+</html>

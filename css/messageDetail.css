@@ -1,0 +1,22 @@
+.exchange-top{
+    padding: 0.1rem 0 0.1rem 0.15rem;
+}
+.messageDetail-content li{
+    padding: 0 0.2rem 0.2rem 0.2rem;
+}
+.messageDetail-content li p{
+    margin-top: 0.1rem;
+    color: #666666;
+    font-size: 0.14rem;
+}
+.messageDetail-content li p:nth-of-type(1){
+    font-size: 0.16rem;
+    color: #333333;
+}
+.messageDetail-img{
+    width: 100%;
+    background: #666666;
+    font-size: 0.14rem;
+    padding: 1rem 0;
+    color: #FFFFFF !important;
+}

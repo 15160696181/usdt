@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/common.css">
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../css/attestation.css">
+    <script src="../js/resize.js"></script>
+    <script src="../js/jquery-3.4.1.min.js"></script>
+    <title>實名認證</title>
+</head>
+<body>
+    <div class="go-back back-blue attestation">
+        <!-- 头部 -->
+        <div class="exchange-top ov">
+            <a href="./mine.html">
+                <img class="fl" src="../images/left.png" alt="">
+            </a>
+            <p class="fl ta-c">實名認證</p>
+        </div>
+        <!-- 中间内容 -->
+        <form action="" method="">
+            <div class="attestation-content">
+                <div class="attestation-content1">
+                    <p>姓名</p>
+                    <input type="text" placeholder="請輸入姓名">
+                </div>
+                <div class="attestation-content2">
+                    <p>身份證號碼</p>
+                    <input type="text" placeholder="請輸身份證號碼">
+                </div>
+                <div class="attestation-content3">
+                    <p>拍攝並上傳您的證件照片</p>
+                    <div class="ta-c">
+                        <img src="../images/camera.png" alt="">
+                        <p>身份證正面</p>
+                        <img id="img" src="" alt="">
+                        <input type="file" id="imgfile" name="imgfile" />
+                    </div>
+                    <div class="ta-c">
+                        <img src="../images/camera.png" alt="">
+                        <p>身份證背面</p>
+                        <img id="img1" src="" alt="">
+                        <input type="file" id="imgfile1" name="imgfile1" />
+                    </div>
+                </div>
+                <button class="btn">確定</button>
+            </div>
+        </form>
+    </div>
+</body>
+<script>
+    var phoneHeight=document.body.clientHeight;
+    if(phoneHeight<=480||phoneHeight>=1024){
+        $('.attestation').height('100%')
+    }
+    var imgfile = document.querySelector('#imgfile');
+    imgfile.onchange = function () {
+        var my_file = this.files[0];
+        var reader = new FileReader();
+        reader.readAsDataURL(my_file);
+        reader.onload = function () {
+            console.log(this.result);
+            $('#img').attr('src',this.result) 
+        }
+    }
+    var imgfile1 = document.querySelector('#imgfile1');
+    imgfile1.onchange = function () {
+        var my_file = this.files[0];
+        var reader = new FileReader();
+        reader.readAsDataURL(my_file);
+        reader.onload = function () {
+            console.log(this.result);
+            $('#img1').attr('src',this.result) 
+        }
+    }
+</script>
+</html>

@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../css/common.css">
+    <link rel="stylesheet" href="../../css/reset.css">
+    <link rel="stylesheet" href="../../css/deal_record.css">
+    <script src="../../js/resize.js"></script>
+    <script src="../../js/jquery-3.4.1.min.js"></script>
+    <title>交易記錄</title>
+</head>
+
+<body>
+    <div class="go-back back-blue deal_record">
+        <!-- 头部 -->
+        <div class="exchange-top ov">
+            <a onclick="goBack()">
+                <img class="fl" src="../../images/left.png" alt="">
+            </a>
+            <p class="fl ta-c">交易記錄</p>
+        </div>
+        <!-- 中间内容 -->
+        <div class="deal_record_content">
+            <!-- 切换 -->
+            <div class="cut ov">
+                <p class="cut_change">買入</p>
+                <p class="">售出</p>
+            </div>
+            <!-- 买入 -->
+            <div class="deal_content1">
+                <ul>
+                    <li class="ov">
+                        <p class="ov">
+                            <span class="fl">123***1234</span>
+                            <span class="fr font-gray2">2020-05-11 12:12:11</span>
+                        </p>
+                        <p>
+                            <span class="font-gray1">
+                                出售數量：
+                            </span>
+                            <span>
+                                2200.00USDT
+                            </span>
+                        </p>
+                        <p class="font-gray1"><span>產品單價：</span><span>￥1.00</span></p>
+                        <p class="font-gray1 ov">
+                            <span class="fl">
+                                <span>購買金額：</span>
+                                <span>￥2200.00</span>
+                            </span>
+                            <span class="fr ta-c" onclick="goSellDealDetail()">查看</span>
+                        </p>
+    
+                    </li>
+                    <li class="ov">
+                        <p class="ov">
+                            <span class="fl">123***1234</span>
+                            <span class="fr font-gray2">2020-05-11 12:12:11</span>
+                        </p>
+                        <p>
+                            <span class="font-gray1">
+                                出售數量：
+                            </span>
+                            <span>
+                                2200.00USDT
+                            </span>
+                        </p>
+                        <p class="font-gray1"><span>產品單價：</span><span>￥1.00</span></p>
+                        <p class="font-gray1 ov">
+                            <span class="fl">
+                                <span>購買金額：</span>
+                                <span>￥2200.00</span>
+                            </span>
+                            <span class="fr ta-c" onclick="goSellDealDetail()">查看</span>
+                        </p>
+    
+                    </li>
+                </ul>
+            </div>
+            <!-- 售出 -->
+            <div class="sell">
+                <ul>
+                    <li class="ov">
+                        <img src="../../images/selling.png" alt="">
+                        <p>
+                            <span>123***1234</span>
+                        </p>
+                        <p>
+                            <span class="font-gray1">
+                                出售數量：
+                            </span>
+                            <span>
+                                2200.00USDT
+                            </span>
+                        </p>
+                        <p class="font-gray1"><span>產品單價：</span><span>￥1.00</span></p>
+                        <p class="font-gray1 ov">
+                            <span class="fl">
+                                <span>購買金額：</span>
+                                <span>￥2200.00</span>
+                            </span>
+                        </p>
+                        <p class="font-gray2">
+                            <span>出售時間：</span>
+                            <span>2020-05-11  12:12:11</span>
+                        </p>
+                        <p class="fr ov">
+                            <span class="fl ta-c" onclick="goBuyDealDetail()">查看</span>
+                            <span class="fl ta-c" onclick="cancel()">取消</span>
+                        </p>
+                    </li>
+                    <li class="ov">
+                        <img src="../../images/finish.png" alt="">
+                        <p>
+                            <span>123***1234</span>
+                        </p>
+                        <p>
+                            <span class="font-gray1">
+                                出售數量：
+                            </span>
+                            <span>
+                                2200.00USDT
+                            </span>
+                        </p>
+                        <p class="font-gray1"><span>產品單價：</span><span>￥1.00</span></p>
+                        <p class="font-gray1 ov">
+                            <span class="fl">
+                                <span>購買金額：</span>
+                                <span>￥2200.00</span>
+                            </span>
+                        </p>
+                        <p class="font-gray2">
+                            <span>出售時間：</span>
+                            <span>2020-05-11  12:12:11</span>
+                        </p>
+                        <p class="fr ov">
+                            <span class="fl ta-c" onclick="goBuyDealDetail()">查看</span>
+                        </p>
+                    </li>
+                    <li class="ov">
+                        <img src="../../images/cancel.png" alt="">
+                        <p>
+                            <span>123***1234</span>
+                        </p>
+                        <p>
+                            <span class="font-gray1">
+                                出售數量：
+                            </span>
+                            <span>
+                                2200.00USDT
+                            </span>
+                        </p>
+                        <p class="font-gray1"><span>產品單價：</span><span>￥1.00</span></p>
+                        <p class="font-gray1 ov">
+                            <span class="fl">
+                                <span>購買金額：</span>
+                                <span>￥2200.00</span>
+                            </span>
+                        </p>
+                        <p class="font-gray2">
+                            <span>出售時間：</span>
+                            <span>2020-05-11  12:12:11</span>
+                        </p>
+                        <p class="fr ov">
+                            <span class="fl ta-c" onclick="goBuyDealDetail()">查看</span>
+                        </p>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</body>
+<script>
+    // 返回
+    function goBack() {
+        window.history.go(-1)
+    }
+    // 查看买入详情
+    function goSellDealDetail(){
+        window.location.href='sell_deal_detail.html'
+    }
+    // 查看售出详情
+    function goBuyDealDetail(){
+        window.location.href='buy_deal_detail.html'
+    }
+    // var url = location.search; //获取url中"?"符后的字串  
+    // var theRequest = new Object();
+    // if (url.indexOf("?") != -1) {
+    //     var str = url.substr(1); //substr()方法返回从参数值开始到结束的字符串；  
+    //     var strs = str.split("&");
+    //     for (var i = 0; i < strs.length; i++) {
+    //         theRequest[strs[i].split("=")[0]] = (strs[i].split("=")[1]);
+    //     }
+    //     console.log(theRequest.code); //此时的theRequest就是我们需要的参数；  
+    // }
+    // if(theRequest.code==1){
+    //     $('.deal_content1').hide()
+    //     $('.sell').show()
+    //     $('.cut p:eq(1)').addClass('cut_change')
+    //     $('.cut p:eq(0)').removeClass('cut_change')
+    // }else{
+    //     $('.deal_content1').show()
+    //     $('.sell').hide()
+    //     $('.cut p:eq(0)').addClass('cut_change')
+    //     $('.cut p:eq(1)').removeClass('cut_change')
+    // }
+    $('.cut p:eq(0)').click(function(){
+        $(this).addClass('cut_change')
+        $(this).siblings().removeClass('cut_change')
+        $('.deal_content1').show()
+        $('.sell').hide()
+    })
+    $('.cut p:eq(1)').click(function(){
+        $(this).addClass('cut_change')
+        $(this).siblings().removeClass('cut_change')
+        $('.deal_content1').hide()
+        $('.sell').show()
+    })
+</script>
+
+</html>

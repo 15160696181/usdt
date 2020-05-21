@@ -1,0 +1,18 @@
+.tb-contont-layout1>p,.tb-contont-layout2>p,.tb-contont-layout3>p:nth-of-type(1){
+    padding: 0.25rem 0 0.05rem 0;
+    font-size: 0.15rem;
+}
+.tb-contont-layout1{
+    position: relative;
+}
+.tb-contont-layout1>img{
+    position: absolute;
+    top: 0.28rem;
+    right: 0;
+    width: 0.2rem;
+    height: 0.2rem;
+}
+.tb-contont-layout3>p:nth-of-type(2){
+    margin: 0.15rem 0 0.75rem 0;
+    font-size: 0.14rem;
+}

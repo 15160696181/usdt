@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/common.css">
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../css/zhuanzhang.css">
+    <script src="../js/resize.js"></script>
+    <title>轉賬</title>
+</head>
+<body>
+    <div class="tb">
+        <!-- 头部 -->
+        <div class="cz-top ov">
+            <div class="fl">
+                <a href="./home.html"><img src="../images/left.png" alt=""></a>
+            </div>
+            <div class="fl ta-c">
+                <p>轉賬</p>
+            </div>
+            <div class="fl ta-r" onclick="goZzRecord()">
+                <p>轉賬記錄</p>
+            </div>
+        </div>
+        <!-- 中间 -->
+        <div class="tb-center ta-c">
+            <p>USDT余額</p>
+            <p>0.00  USDT</p>
+        </div>
+    </div>
+    <!-- 内容 -->
+    <div class="tb-contont">
+        <div class="tb-contont1">
+            <div class="tb-contont-layout1">
+                <p>收貨地址</p>
+                <input type="text" placeholder="請輸入收貨地址">
+                <img src="../images/saomiao.png" alt="">
+            </div>
+            <div class="tb-contont-layout2">
+                <p>轉賬數量</p>
+                <input type="text" placeholder="請輸入轉賬數量">
+            </div>
+            <div class="tb-contont-layout3">
+                <p>資金密碼</p>
+                <input type="text" placeholder="請輸入資金密碼">
+                <p>
+                    <span>
+                        <span>
+                            最低轉賬
+                        </span>
+                        <span class="font-red1">10.00</span>
+                    </span>
+                    <span>
+                        <span>,需手續費
+                        </span>
+                        <span class="font-red1">1.00</span>
+                    </span>
+                </p>
+            </div>
+            <div class="ta-c">
+                <button>確認</button>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="../js/jquery-3.4.1.min.js"></script>
+<script src="../js/scroll.js"></script>
+<script>
+    function goZzRecord(){
+        window.location='zz_record.html'
+    }
+</script>
+</html>

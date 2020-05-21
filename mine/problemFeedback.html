@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/common.css">
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../css/problemFeedback.css">
+    <script src="../js/resize.js"></script>
+    <script src="../js/jquery-3.4.1.min.js"></script>
+    <title>問題反饋</title>
+</head>
+
+<body>
+    <div class="problemFeedback back-blue">
+        <!-- 头部 -->
+        <div class="cz-top ov">
+            <div class="fl">
+                <a href="./mine.html"><img src="../images/left.png" alt=""></a>
+            </div>
+            <div class="fl ta-c">
+                <p>問題反饋</p>
+            </div>
+            <div class="fl ta-r">
+                <p>反饋記錄</p>
+            </div>
+        </div>
+        <!-- 内容 -->
+        <div class="changePassword-content">
+            <form action="" method="">
+                <div class="attestation-content">
+                    <div class="attestation-content1">
+                        <p>反饋類型</p>
+                        <input type="text" placeholder="請選擇提交類型">
+                    </div>
+                    <div class="attestation-content2">
+                        <p>問題和建議</p>
+                        <textarea placeholder="請詳細描述您的問題或意見……"></textarea>
+                    </div>
+                    <div>
+                        <p><span>
+                                圖片（提供問題截圖，縂大小
+                            </span><span class="font-red1">10M</span><span>
+                                以下）
+                            </span></p>
+                        <div class="ov add_image">
+                            <p class="fl">
+                                <input type="file" id="imgfile" name="imgfile" />
+                                <img src="../images/add.png" alt="">
+                            </p>
+                            <div class="imgup">
+                                <img src="" class="fl" alt="" id="img">
+                            </div>
+                        </div>
+                    </div>
+                    <button class="btn">提交</button>
+
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+<script>
+    var imgfile = document.querySelector('#imgfile');
+    imgfile.onchange = function () {
+        var my_file = this.files[0];
+        var reader = new FileReader();
+        reader.readAsDataURL(my_file);
+        reader.onload = function () {
+            console.log(this.result);
+            $('#img').attr('src', this.result)
+        }
+    }
+    $("#fileUpload").on('change', function () {
+
+        if (typeof (FileReader) != "undefined") {
+
+            var image_holder = $("#image-holder");
+            image_holder.empty();
+
+            var reader = new FileReader();
+            reader.onload = function (e) {
+                $("<img />", {
+                    "src": e.target.result,
+                    "class": "thumb-image"
+                }).appendTo(image_holder);
+
+            }
+            image_holder.show();
+            reader.readAsDataURL($(this)[0].files[0]);
+        } else {
+            alert("你的浏览器不支持FileReader.");
+        }
+    });
+</script>
+
+</html>

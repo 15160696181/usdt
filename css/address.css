@@ -1,0 +1,49 @@
+.address{
+    width: 100%;
+    height: 100vh;
+}
+.exchange-top{
+    background: transparent;
+}
+/* 中间内容 */
+.address-content{
+    padding: 0.11rem 4% 0.1rem 4%;
+}
+.address-content li{
+    margin-top: 0.1rem;
+}
+.address-content li:nth-of-type(1){
+    margin-top: 0;
+}
+.address-content li:nth-last-of-type(1){
+    margin-bottom: 0.5rem;
+}
+.address-content-li{
+    width: 100%;
+    border-radius: 0.1rem;
+    background: #FFFFFF;
+}
+.address-content-li p{
+    font-size: 0.15rem;
+}
+.address-content-li p:nth-of-type(1){
+    padding: 0.13rem 0.15rem 0.11rem 0.15rem;
+}
+.address-content-li p:nth-of-type(2),.address-content-li p:nth-of-type(3){
+    padding-left: 0.26rem;
+    width: 80%;
+}
+.address-content-li p:nth-of-type(3){
+    padding: 0.12rem 0 0.11rem 0.26rem;
+}
+/* 底部固定 */
+.add-address{
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: 0.5rem;
+    line-height: 0.5rem;
+    color: #FFFFFF;
+    background:linear-gradient(90deg,rgba(255,39,127,1) 0%,rgba(255,83,153,1) 100%);
+    font-size: 0.15rem;
+}

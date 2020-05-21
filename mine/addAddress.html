@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/common.css">
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../css/changePassword.css">
+    <script src="../js/resize.js"></script>
+     <script src="../js/jquery-3.4.1.min.js"></script>
+    <title></title>
+</head>
+<style>
+.exchange-top{
+    background: transparent;
+}
+.btn{
+    margin-top: 0.55rem !important;
+}
+.attestation-content div p{
+    font-size: 0.13rem;
+}
+.attestation-content div input{
+    padding: 0.13rem 0 0.13rem 0.15rem;
+    width: 95%;
+}
+.send-code{
+    font-size: 0.15rem !important;
+    top: 0.45rem;
+}
+</style>
+<body>
+    <div class="go-back changePassword back-blue">
+        <!-- 头部 -->
+        <div class="changePassword-top exchange-top">
+            <div class="ov">
+                <a href="./address.html">
+                    <img class="fl" src="../images/left.png" alt="">
+                </a>
+                <p class="fl ta-c">添加提幣地址</p>
+            </div>
+
+        </div>
+        <!-- 内容 -->
+        <div class="changePassword-content">
+            <div class="attestation-content">
+                <div class="attestation-content1">
+                    <p>提幣地址</p>
+                    <input type="text" placeholder="請輸入提幣地址（僅支持USDT-ERC20代幣）">
+                </div>
+                <div class="attestation-content2">
+                    <p>標籤</p>
+                    <input type="text" placeholder="請輸入標籤總係">
+                </div>
+                <div class="attestation-content2">
+                    <p>備注</p>
+                    <input type="text" placeholder="該備注信息用於標籤">
+                </div>
+                <div class="attestation-content2">
+                    <p>資金密碼</p>
+                    <input type="text" placeholder="請輸入資金密碼">
+                </div>
+                <div class="attestation-content3">
+                    <p>短信驗證碼</p>
+                    <input type="text" placeholder="請輸入驗證碼">
+                    <p class="send-code">獲取驗證碼</p>
+                </div>
+                <button class="btn">確定</button>
+            </div>
+        </div>
+    </div>
+</body>
+<script>
+    var phoneHeight=document.body.clientHeight;
+    if(phoneHeight<=480||phoneHeight>=1024){
+        $('.changePassword').height('100%')
+    }
+</script>
+
+</html>
